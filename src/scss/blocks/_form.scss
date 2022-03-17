@@ -1,0 +1,36 @@
+.form {
+  max-width: 35rem;
+  margin-left: auto;
+  margin-right: auto;
+  background: get-color("white");
+  padding: 1.5625rem;
+  border-radius: 4px;
+  .form-intro {
+    text-align: center;
+  }
+
+  form {
+    label {
+      cursor: pointer;
+      color: get-color("dark");
+    }
+
+    input:not([type="submit"]),
+    textarea {
+      background: get-color("secondary-100");
+      width: 100%;
+      padding: 0.5rem 1rem;
+      resize: vertical;
+      border: none;
+      border-bottom: 1px solid get-color("secondary");
+
+      &:focus {
+        outline: 2px dashed get-color("secondary");
+        outline-offset: -5px;
+      }
+    }
+    input[type="submit"] {
+      width: 100%;
+    }
+  }
+}

@@ -1,0 +1,51 @@
+.button {
+  display: inline-block;
+  pointer-events: auto;
+  cursor: pointer;
+  border-radius: 4px;
+  padding: get-size("300") get-size("400");
+  font-size: 1em;
+  color: get-color("white");
+  background: get-color("primary");
+  @include apply-utility("weight", "semi-bold");
+  border: 1px solid get-color("primary");
+
+  &:hover {
+    background: get-color("white");
+    color: get-color("primary");
+  }
+
+  &:focus {
+    outline: 2px dashed get-color("white");
+    outline-offset: -5px;
+  }
+
+  &--secondary {
+    background: get-color("secondary");
+    color: get-color("secondary-800");
+    border-color: get-color("secondary");
+
+    &:hover {
+      background: get-color("secondary-800");
+      color: get-color("secondary");
+    }
+
+    &:focus {
+      outline-color: get-color("secondary-800");
+    }
+  }
+}
+
+.inline-link {
+  display: inline-block;
+  pointer-events: auto;
+  cursor: pointer;
+  color: get-color("secondary");
+  @include apply-utility("weight", "semi-bold");
+  text-decoration: underline;
+
+  &:hover {
+    color: get-color("primary");
+  }
+
+}

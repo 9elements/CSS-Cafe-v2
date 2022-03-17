@@ -1,0 +1,74 @@
+<section style="width: 100%;" class=" table-header stack-900">
+  <div class="wrapper stack-900">
+    {% if title == "Home" %}
+    <h1 class="font-headline uppercase color-gray-100">{{hero.body}}</h1>
+    <div class="up-next">
+      <div class="speaker sidebar-left" style="--sidebar-gap: 2rem">
+        {% if upNext.speaker2 %}
+        <div class="speaker__image"> 
+          <img
+            style="width: 50%"
+            src="{{upNext.speakerImage}}"
+            alt="Image of {{upNext.speaker}}"
+          />
+          <img
+            style="width: 50%; border-left: 2px solid #fff"
+            src="{{upNext.speaker2Image}}"
+            alt="Image of {{upNext.speaker2}}"
+          />
+        </div>
+        {% else %}
+        <div class="speaker__image"> 
+          <img
+            src="{{upNext.speakerImage}}"
+            alt="Image of {{upNext.speaker}}"
+          />      
+        </div>
+        {% endif %}
+        <div class="speaker__info stack-200">
+          <h2 class="text-400 weight-semi-bold ">Up next:</h2>
+          <h3 class="font-headline uppercase text-800 color-gray-100">{{upNext.topic}}</h3>
+          <p class="weight-semi-bold"><span>{{upNext.date}} {{upNext.time}}</span> <br>by {{upNext.speaker}} {% if upNext.speaker2 %} & {{upNext.speaker2}} {% endif %}</p>
+          <a href="{{upNext.meetupUrl}}" class="inline-link color-secondary">Register now</a>
+        </div>
+      </div>
+    </div>
+    {% else %}
+    <h2 class="text-800 md:text-850 uppercase">{{title}}</h2>
+    <div class="talk-container sidebar-right">
+      {% if videoId %}
+      {% include 'partials/youtube.html' %}
+      {% endif %} 
+      <div>
+        <p class="">{{description}}</p>
+      </div>
+    </div>
+    {% endif %}
+    </div>
+
+    {% if title == "Home" %}
+      <div class="table">
+      <picture>
+        <source srcset="
+        /images/coffee/611-mockup.avif 611w,
+          /images/coffee/1222-mockup.avif 1222w" 
+          type="image/avif"
+          sizes="(min-width: 510px) 611px, 120vw">
+        <source srcset="
+        /images/coffee/611-mockup.webp 611w,
+          /images/coffee/1222-mockup.webp 1222w" 
+          type="image/webp"
+          sizes="(min-width: 510px) 611px, 120vw">
+        <img srcset="
+        /images/coffee/611-mockup.png 611w,
+          /images/coffee/1222-mockup.png 1222w" 
+          src="/images/coffee/611-mockup.png" 
+          sizes="(min-width: 510px) 611px, 120vw"
+          alt="" />
+      </picture>
+    {% else %}
+    <div class="table" style="margin-top:0;">
+    {% endif %}
+    
+  </div>
+</section>

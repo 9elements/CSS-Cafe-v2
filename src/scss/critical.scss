@@ -1,0 +1,113 @@
+// First up: config and functions
+@import "config";
+// Next: pull in gorko for design tokens
+@import "../../node_modules/gorko/gorko.scss";
+@import "reset";
+@import "typography";
+
+@each $key, $value in $gorko-size-scale {
+  #{".stack-" + $key + " > *"} {
+    --stack-space: #{$value};
+  }
+
+  #{".stack-" + $key + " > * + *"} {
+    margin-top: var(--stack-space, 1em);
+  }
+}
+
+/* -------------------------------- */
+/* Utility Classes for Self-Spacing */
+
+@each $key, $value in $gorko-size-scale {
+  #{".my-stack-space-" + $key} {
+    --stack-space: #{$value};
+  }
+}
+
+body {
+  @include apply-utility("font", "base");
+  @include apply-utility("color", "gray-50");
+  @include apply-utility("bg", "dark");
+  @include apply-utility("weight", "regular");
+  line-height: 1.5;
+  // background-image: url("/images/bg.svg");
+  // background-repeat: no-repeat;
+  // //background-position: 100% 100%;
+  // background-size: cover;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  @include apply-utility("leading", "flat");
+}
+
+p {
+  @include apply-utility("color", "gray-50");
+  @include apply-utility("leading", "loose");
+  @include apply-utility("text", "500");
+}
+
+p:not([class]) {
+  @include apply-utility("text", "500");
+}
+
+a {
+  cursor: pointer;
+  text-decoration: none;
+  font-weight: 600;
+  color: get-color("gray-50");
+
+  &:focus {
+    outline: 2px dashed currentColor;
+  }
+  &:hover {
+    color: get-color("secondary");
+  }
+}
+
+main {
+  background-image: linear-gradient(
+    180deg,
+    #000 0%,
+    rgba(0, 0, 0, 0.5) 25%,
+    get-color("dark")
+  );
+  background-size: 100% 5rem;
+  background-repeat: no-repeat;
+  padding-top: 12.5rem;
+}
+
+// *:focus {
+//   outline: none;
+//   box-shadow: inset 0 0 0 4px lightBlue;
+// }
+
+//Blocks
+@import "blocks/baristas";
+@import "blocks/button";
+@import "blocks/form";
+@import "blocks/nav";
+@import "blocks/previous-events";
+@import "blocks/seperator";
+@import "blocks/single-event";
+@import "blocks/site-foot";
+@import "blocks/site-head";
+@import "blocks/skip-link";
+@import "blocks/tablist";
+@import "blocks/table-header";
+@import "blocks/up-next";
+@import "blocks/youtube";
+
+//Utilities
+@import "utilities/center";
+@import "utilities/sr-only";
+@import "utilities/uppercase";
+
+//Layout
+@import "layout/centerflex";
+@import "layout/cluster";
+@import "layout/grid-switcher";
+@import "layout/sidebar";
+@import "layout/wrapper";

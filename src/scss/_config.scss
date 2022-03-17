@@ -1,0 +1,153 @@
+/**
+ * BASE SIZE
+ * All calculations are based on this. It’s recommended that
+ * you keep it at 1rem because that is the root font size. You
+ * can set it to whatever you like and whatever unit you like.
+ */
+$gorko-base-size: 1rem;
+
+/**
+    * SIZE SCALE
+    * This is a Perfect Fourth scale that powers all the utilities that
+    * it is relevant for (font-size, margin, padding). All items are
+    * calcuated off the base size, so change that and cascade across
+    * your whole project.
+    */
+$gorko-size-scale: (
+  /* @link https://utopia.fyi/type/calculator?c=320,15,1.125,1020,16,1.2,8,1,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l */
+    // "200": $gorko-base-size * 0.5,
+  // // 8px
+  // "300": $gorko-base-size * 0.625,
+  // // 10px
+  // "400": $gorko-base-size,
+  // // 16px
+  // "500": $gorko-base-size * 1.125,
+  // // 18px
+  // "600": $gorko-base-size * 1.25,
+  // // 20px
+  // "700": $gorko-base-size * 1.375,
+  // // 22px
+  // "800": $gorko-base-size * 1.5,
+  // // 24px
+  // "850": $gorko-base-size * 2.1875,
+  // // 35px
+  // "900": $gorko-base-size * 5,
+  // // 80px
+  // "major": $gorko-base-size * 5.625,
+  // // 90px
+  /* 13.33px */ "200": clamp(0.83rem, calc(0.83rem + 0vw), 0.83rem),
+  /* 15px - 16px */ "300": clamp(0.94rem, calc(0.91rem + 0.14vw), 1rem),
+  /* 17px - 19px */ "400": clamp(1.06rem, calc(0.99rem + 0.33vw), 1.2rem),
+  /* 19px - 23px */ "500": clamp(1.19rem, calc(1.07rem + 0.58vw), 1.44rem),
+  /* 21px - 28px */ "600": clamp(1.34rem, calc(1.16rem + 0.9vw), 1.73rem),
+  /* 24px - 33px */ "700": clamp(1.5rem, calc(1.24rem + 1.31vw), 2.07rem),
+  /* 27px - 40px */ "800": clamp(1.69rem, calc(1.32rem + 1.83vw), 2.49rem),
+  /* 30px - 48px */ "900": clamp(1.9rem, calc(1.4rem + 2.48vw), 2.99rem),
+  /* 34px - 58px */ "1000": clamp(2.14rem, calc(1.48rem + 3.3vw), 3.58rem),
+  /* 38px - 69px */ "major": clamp(2.41rem, calc(1.54rem + 4.33vw), 4.3rem)
+);
+
+/* @link https://utopia.fyi/space/calculator?c=320,14,1.125,1140,16,1.333,6,1,&s=0.75|0.5|0.25,1.5|2.25|3.375|5|8,s-l */
+$space-size-scale: (
+  // T-shirt sizes
+  "3xs": clamp(0.25rem, calc(0.25rem + 0vw), 0.25rem),
+  "2xs": clamp(0.5rem, calc(0.5rem + 0vw), 0.5rem),
+  "xs": clamp(0.69rem, calc(0.66rem + 0.14vw), 0.75rem),
+  "s": clamp(0.94rem, calc(0.91rem + 0.14vw), 1rem),
+  "m": clamp(1.44rem, calc(1.41rem + 0.14vw), 1.5rem),
+  "l": clamp(1.88rem, calc(1.82rem + 0.29vw), 2rem),
+  "xl": clamp(2.81rem, calc(2.73rem + 0.43vw), 3rem),
+  "2xl": clamp(3.75rem, calc(3.64rem + 0.57vw), 4rem),
+  "3xl": clamp(5.63rem, calc(5.45rem + 0.86vw), 6rem),
+  /* One-up pairs */ "3xs-2xs": clamp(0.25rem, calc(0.14rem + 0.57vw), 0.5rem),
+  "2xs-xs": clamp(0.5rem, calc(0.39rem + 0.57vw), 0.75rem),
+  "xs-s": clamp(0.69rem, calc(0.54rem + 0.71vw), 1rem),
+  "s-m": clamp(0.94rem, calc(0.68rem + 1.29vw), 1.5rem),
+  "m-l": clamp(1.44rem, calc(1.18rem + 1.29vw), 2rem),
+  "l-xl": clamp(1.88rem, calc(1.36rem + 2.57vw), 3rem),
+  "xl-2xl": clamp(2.81rem, calc(2.27rem + 2.71vw), 4rem),
+  "2xl-3xl": clamp(3.75rem, calc(2.72rem + 5.14vw), 6rem)
+);
+
+/**
+    * COLORS
+    * Colors are shared between backgrounds and text by default.
+    * You can also use them to power borders, fills or shadows, for example.
+    */
+$gorko-colors: (
+  "dark": #302b29,
+  "white": #fff,
+  "primary": #ff0198,
+  "secondary": #92d6ea,
+  "secondary-100": #dbf2f8,
+  "secondary-800": #354f56,
+  "gray": #bdbbbb,
+  "gray-50": #fafafa,
+  "gray-100": #eeeded,
+  "gray-600": #757170,
+  "gray-800": #4f4a48
+);
+
+/**
+    * CORE CONFIG
+    * This powers everything from utility class generation to breakpoints
+    * to enabling/disabling pre-built components/utilities.
+    */
+$gorko-config: (
+  "bg": (
+    "items": $gorko-colors,
+    "output": "standard",
+    "property": "background-color"
+  ),
+  "color": (
+    "items": $gorko-colors,
+    "output": "standard",
+    "property": "color"
+  ),
+  "font": (
+    "items": (
+      "head": '"Bebas Neue", Impact, "Franklin Gothic Bold", sans-serif;',
+      "base": '"IBM Plex Mono", monospace',
+      "headline": "Nexa"
+    ),
+    "output": "standard",
+    "property": "font-family"
+  ),
+  "gap-top": (
+    "items": $gorko-size-scale,
+    "output": "responsive",
+    "property": "margin-top"
+  ),
+  "leading": (
+    "items": (
+      "loose": 1.5,
+      "tight": 1.25,
+      "flat": 1.1
+    ),
+    "output": "standard",
+    "property": "line-height"
+  ),
+  "text": (
+    "items": $gorko-size-scale,
+    "output": "responsive",
+    "property": "font-size"
+  ),
+  "weight": (
+    "items": (
+      "regular": 400,
+      "semi-bold": 600,
+      "bold": 700,
+      "italic": italic
+    ),
+    "output": "standard",
+    "property": "font-weight"
+  ),
+  "breakpoints": (
+    "md": "(min-width: 42.5em)",
+    // 680px
+    "lg": "(min-width: 64em)",
+    // 1024px
+    "xl": "(min-width: 90em)",
+    // 1440px
+  )
+);

@@ -1,0 +1,85 @@
+{% extends "layouts/base.html" %} {% block content %}
+<section class="single-event stack-500">
+  <div class="talk-info stack-500">
+    <div class="wrapper">
+      <div class="speaker-info sidebar-left stack-500">
+        <div class="speaker-info__image gap-top-500">
+          <picture>
+            <source
+            srcset="/images/speaker/{{speakerImage}}.webp"
+            type="image/webp"
+            />
+            <img
+            src="/images/speaker/{{speakerImage}}.jpg"
+            alt="Portrait of {{speaker}}"
+            />
+          </picture>
+        </div>
+        <div class="speaker-info__text stack-500">    
+          <h2 class="font-headline text-850 uppercase weight-bold">{{speaker}}</h2>
+          <p><span><svg class="speaker-info__icon" aria-hidden="true" focusable="false">
+              <use xlink:href="/icons/icons.svg#twitter" />
+            </svg></span><a href="https://twitter.com/{{twitter}}" target= "_blank" class="inline-link">@{{twitter}}</a>
+          </p>
+          <p class="">{{speakerBio}}</p>
+        </div>
+      </div>
+      {% if speaker2 %}
+      <div class="speaker-info sidebar-right stack-500" style="border-bottom: none">
+        <div class="speaker-info__text stack-500 gap-top-500">    
+          <h2 class="font-headline text-850 uppercase weight-bold">{{speaker2}}</h2>
+          <p><span><svg class="speaker-info__icon" aria-hidden="true" focusable="false">
+              <use xlink:href="/icons/icons.svg#twitter" />
+            </svg></span><a href="https://twitter.com/{{twitter2}}" target= "_blank" class="inline-link">@{{twitter2}}</a>
+          </p>
+          <p class="">{{speaker2Bio}}</p>
+        </div>
+        <div class="speaker-info__image gap-top-500">
+          <picture>
+          <source
+            srcset="/images/speaker/{{speaker2Image}}.webp"
+            type="image/webp"
+          />
+          <img
+            src="/images/speaker/{{speaker2Image}}.jpg"
+            alt="Portrait of {{speaker2}}"
+          />
+          </picture>
+        </div>
+      {% endif %}
+      </div>
+      <div class="wrapper">
+        <div class="shared-links">
+          {% if shared.websites %}
+          <h3 class="font-headline">Websites</h3>
+          <ul>
+            {% for item in shared.websites %}
+            <li><a href="{{item.url}}" target="_blank" style >{{item.text}} <span><svg class="icon" aria-hidden="true" focusable="false"><use xlink:href="/icons/icons.svg#link" /></svg></span> </a>
+            </li>
+            {% endfor %}
+          </ul>
+          {% endif %}
+          {% if shared.youtube %}
+          <h3 class="font-headline">Youtube</h3>
+          <ul>
+            {% for item in shared.youtube %}
+            <li><a href="{{item.url}}" target="_blank" style >{{item.text}} <span><svg class="icon" aria-hidden="true" focusable="false"><use xlink:href="/icons/icons.svg#link" /></svg></span> </a>
+            </li>
+            {% endfor %}
+          </ul>
+          {% endif %}
+          {% if shared.codepen %}
+          <h3 class="font-headline">Codepens</h3>
+          <ul>
+            {% for item in shared.codepen %}
+            <li><a href="{{item.url}}" target="_blank" style >{{item.text}} <span><svg class="icon" aria-hidden="true" focusable="false"><use xlink:href="/icons/icons.svg#link" /></svg></span> </a>
+            </li>
+            {% endfor %}
+          </ul>
+          {% endif %}
+        </div>
+      </div>   
+  </div>
+</section>
+
+{% endblock %}

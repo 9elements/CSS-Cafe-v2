@@ -1,0 +1,167 @@
+ 
+.table-header {
+
+  position: relative;
+
+    // padding-bottom: 35vh;
+    h1 {
+        font-size: 46px;
+        line-height: 1.1;
+        text-align: center;
+        max-width: 60rem;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 0 1.25rem;
+    }
+
+  .up-next {
+    min-height: 35em;
+    // max-width: 50%;
+
+    @include media-query("lg") {
+      min-height: 12em;
+    }
+  }
+
+  .talk-container {
+    --sidebar-gap: 2rem;
+    --sidebar-threshold: 20rem;
+    --sidebar-alignment: flex-start;
+    --sidebar-width: 20rem;
+    flex-wrap: wrap-reverse;
+    // gap: 2rem; 
+    // flex-
+
+  }
+  }
+  
+  
+  .table {
+    width: 100%;
+    height: 5rem;
+    height: min(25vw, 5rem);
+    position: relative;
+    left: 0;
+    background-color: #e3dfda;
+    background-repeat: no-repeat;
+    background-image: 
+      /* vignette */ 
+      linear-gradient(
+        to right,
+        hsla(0, 0%, 0%, 0.4) 0%,
+        hsla(0, 0%, 0%, 0.395) 8.1%,
+        hsla(0, 0%, 0%, 0.381) 15.5%,
+        hsla(0, 0%, 0%, 0.358) 22.5%,
+        hsla(0, 0%, 0%, 0.33) 29%,
+        hsla(0, 0%, 0%, 0.296) 35.3%,
+        hsla(0, 0%, 0%, 0.259) 41.2%,
+        hsla(0, 0%, 0%, 0.22) 47.1%,
+        hsla(0, 0%, 0%, 0.18) 52.9%,
+        hsla(0, 0%, 0%, 0.141) 58.8%,
+        hsla(0, 0%, 0%, 0.104) 64.7%,
+        hsla(0, 0%, 0%, 0.07) 71%,
+        hsla(0, 0%, 0%, 0.042) 77.5%,
+        hsla(0, 0%, 0%, 0.019) 84.5%,
+        hsla(0, 0%, 0%, 0.005) 91.9%,
+        hsla(0, 0%, 0%, 0) 100%
+      ),
+      linear-gradient(
+        to left,
+        hsla(0, 0%, 0%, 0.4) 0%,
+        hsla(0, 0%, 0%, 0.395) 8.1%,
+        hsla(0, 0%, 0%, 0.381) 15.5%,
+        hsla(0, 0%, 0%, 0.358) 22.5%,
+        hsla(0, 0%, 0%, 0.33) 29%,
+        hsla(0, 0%, 0%, 0.296) 35.3%,
+        hsla(0, 0%, 0%, 0.259) 41.2%,
+        hsla(0, 0%, 0%, 0.22) 47.1%,
+        hsla(0, 0%, 0%, 0.18) 52.9%,
+        hsla(0, 0%, 0%, 0.141) 58.8%,
+        hsla(0, 0%, 0%, 0.104) 64.7%,
+        hsla(0, 0%, 0%, 0.07) 71%,
+        hsla(0, 0%, 0%, 0.042) 77.5%,
+        hsla(0, 0%, 0%, 0.019) 84.5%,
+        hsla(0, 0%, 0%, 0.005) 91.9%,
+        hsla(0, 0%, 0%, 0) 100%
+      ),
+  
+      /* Highlight */
+      linear-gradient(
+        0deg,
+        rgba(237, 234, 231, 0) 6%,
+        rgb(237, 234, 231) 40%,
+        rgb(237, 234, 231) 60%,
+        rgba(237, 234, 231, 0) 100%
+      ),
+      /* top gradients */
+      /*
+      linear-gradient(
+        to bottom,
+        hsla(0, 0%, 0%, 0.6) 0%,
+        hsla(0, 0%, 0%, 0.592) 8.1%,
+        hsla(0, 0%, 0%, 0.571) 15.5%,
+        hsla(0, 0%, 0%, 0.538) 22.5%,
+        hsla(0, 0%, 0%, 0.495) 29%,
+        hsla(0, 0%, 0%, 0.444) 35.3%,
+        hsla(0, 0%, 0%, 0.389) 41.2%,
+        hsla(0, 0%, 0%, 0.33) 47.1%,
+        hsla(0, 0%, 0%, 0.27) 52.9%,
+        hsla(0, 0%, 0%, 0.211) 58.8%,
+        hsla(0, 0%, 0%, 0.156) 64.7%,
+        hsla(0, 0%, 0%, 0.105) 71%,
+        hsla(0, 0%, 0%, 0.062) 77.5%,
+        hsla(0, 0%, 0%, 0.029) 84.5%,
+        hsla(0, 0%, 0%, 0.008) 91.9%,
+        hsla(0, 0%, 0%, 0) 100%
+      ),*/
+        linear-gradient(
+      to bottom,
+      hsla(0, 0%, 0%, 0.6) 0%,
+      hsla(0, 0%, 0%, 0.561) 5.6%,
+      hsla(0, 0%, 0%, 0.518) 11.4%,
+      hsla(0, 0%, 0%, 0.473) 17.5%,
+      hsla(0, 0%, 0%, 0.425) 23.8%,
+      hsla(0, 0%, 0%, 0.376) 30.4%,
+      hsla(0, 0%, 0%, 0.327) 37.1%,
+      hsla(0, 0%, 0%, 0.279) 43.9%,
+      hsla(0, 0%, 0%, 0.232) 50.9%,
+      hsla(0, 0%, 0%, 0.186) 57.9%,
+      hsla(0, 0%, 0%, 0.144) 65%,
+      hsla(0, 0%, 0%, 0.105) 72.1%,
+      hsla(0, 0%, 0%, 0.07) 79.1%,
+      hsla(0, 0%, 0%, 0.04) 86.2%,
+      hsla(0, 0%, 0%, 0.017) 93.1%,
+      hsla(0, 0%, 0%, 0) 100%
+    ),
+      /* bottom gradients */
+      linear-gradient(to top, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 16%),
+      linear-gradient(
+        to top,
+        rgba(0, 0, 0, 0.39) -78.89%,
+        rgba(0, 0, 0, 0) 71.11%
+      ),
+      linear-gradient(0deg, #d3cac0, #d3cac0);
+    background-size: 
+      calc(60% - 12rem) 100%, 
+      calc(60% - 12rem) 100%, 
+      100% 0.75rem, 
+      100% calc(100% - 2.65rem), 
+      100% 2.75rem, 
+      100% 2.75rem, 
+      100% 2.75rem;
+    background-position: 
+      left -10% center,
+      right -10% center, 
+      center bottom 2.2rem, 
+      center top, 
+      center bottom, 
+      center bottom, 
+      center bottom;
+    
+    img {
+      position: absolute;
+      right: 10vw;
+      bottom: 1.5rem;
+      width: min(120vw, 38.1875rem);
+    }
+  }

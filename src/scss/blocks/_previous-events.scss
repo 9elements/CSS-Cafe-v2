@@ -1,0 +1,95 @@
+.previous-events {
+  h2 {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    max-width: 40rem;
+  }
+  
+  .event-list {
+    &__years {
+      --cluster-gap: 1.25rem;
+      --cluster-gap-vertical: 3rem;
+      --cluster-justification: center;
+
+      li {
+        &__focus {
+          background: yellow;
+        }
+      }
+
+    }
+  }
+
+  .event-teaser {
+  --sidebar-width: 6ch;
+  --sidebar-gap: 0px;
+  --sidebar-alignment: center;
+    border-radius: 4px;
+    position: relative;
+
+    &:hover &__info p {
+      color: red;
+    }
+    &:hover .button {
+      transition: all .2s ease-in;
+      background: get-color('secondary-800');
+      color: get-color('secondary');
+    }
+
+    &__body{
+      --sidebar-width: max-content;
+      --sidebar-threshold: 27rem;
+      --sidebar-gap: 1rem;
+    
+      .button{
+        text-align: center;
+      }
+    }
+
+ > * {
+   padding: 1ch;
+ }
+    &__date {
+      align-self: stretch;
+      display: flex;
+      align-items: center;
+      font-style: italic;
+      border-radius: 4px 0 0 4px;
+      font-size: 24px;
+      line-height: 1.08;
+    }
+
+    &__info {
+      p {
+        line-height: 1.3;
+        span{
+          font-style: italic;
+        }
+        span:first-of-type{
+          display: block;
+        }
+      }
+
+    }
+
+    &__link {
+      position: absolute;
+      left: 0;
+      top: 0;
+      right: 0;
+      bottom: 0;
+
+      &:focus {
+        outline-color: get-color("primary");
+        outline-offset: -5px;
+      }
+    }
+
+    // &:hover .button {
+    //   background: get-color("dark");
+    //   color: get-color("secondary");
+    // }
+
+  }
+}

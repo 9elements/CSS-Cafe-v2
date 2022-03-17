@@ -1,0 +1,20 @@
+{
+  "items": [
+    {
+      "text": "About",
+      "url": "/about/"
+    },
+    {
+      "text": "Events",
+      "url": "/events/"
+    },
+    {
+      "text": "Join on Meetup",
+      "url": "https://www.meetup.com/de-DE/CSS-Cafe/"
+    },
+    {
+      "text": "Submit your Talk",
+      "url": "/contact/"
+    }
+  ]
+}

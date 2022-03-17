@@ -1,0 +1,13 @@
+<article class="event-teaser sidebar-left bg-white">
+  <p class="event-teaser__date color-dark bg-gray uppercase">
+    {{event.data.date | dateFilter}}
+  </p>
+  <div class="sidebar-right event-teaser__body">
+    <div class="event-teaser__info">
+      <a href="{{ event.url }}" class="event-teaser__link"></a>
+      <p class="color-gray-800 text-500 md:text-800 weight-bold"><span class="color-gray-600 text-400">{{event.data.speaker}} {% if event.data.speaker2 %} & {{event.data.speaker2}} {% endif %}<span class="sr-only">:</span></span>{{event.data.title}}
+      </p>
+    </div>
+    <div class="button button--secondary" aria-hidden="true">View Event</div>
+  </div>
+</article>
