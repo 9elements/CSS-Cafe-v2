@@ -4,12 +4,14 @@ date: "2021-04-29"
 time: "5PM CEST"
 speaker: "Bramus Van Damme"
 speakerImage: "bramus-van-damme"
-description: "A new and upcoming addition to CSS are “Scroll-linked Animations” which allows you to link animations to the scroll offset of a scroll container using only CSS — no JavaScript needed! In this demo-heavy presentation we'll dig into the what this spec has to offer and what we can build with it."
 videoId : "NS4lmu6AJuI"
 videoTitle: "Scroll-linked Animations with CSS @scroll-timeline"
 speakerBio: "Bramus Van Damme is a web developer from Belgium. From the moment he discovered view-source at the age of 14 (way back in 1997), he fell in love with the web and has been tinkering with it ever since.
 
 With his company 3RDS he works as a freelance developer, tackling both the frontend (HTML, CSS, JS) and the backend (PHP, MySQL). His current focus is on JavaScript, React and React Native yet his love for CSS will never fade. Not limiting himself to only part of the stack, he also knows his way around supporting technologies (HTTPS, DNS, Docker, Serverless, …)"
+twitter:
+  url: "https://twitter.com/bramus"
+  text: "@bramus"
 meetupLink: #
 shared:
   websites:
@@ -50,3 +52,5 @@ shared:
 
 
 ---
+
+A new and upcoming addition to CSS are “Scroll-linked Animations” which allows you to link animations to the scroll offset of a scroll container using only CSS — no JavaScript needed! In this demo-heavy presentation we'll dig into the what this spec has to offer and what we can build with it.

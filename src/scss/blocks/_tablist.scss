@@ -1,31 +1,31 @@
-
 [role="tablist"] {
-    padding: 0;
-  }
-  
-  [role="tablist"] li, [role="tablist"] a {
-    display: inline-block;
-  }
-  
-  [role="tablist"] a {
-    text-decoration: none;
-    padding: 0.5rem 1em;
-  }
-  
-  [role="tablist"] [aria-selected] {
-    display: inline-block;
-    pointer-events: auto;
-    cursor: pointer;
-    border-radius: 4px;
-    padding: get-size("300") get-size("400");
-    font-size: 1em;
-    color: get-color("white");
-    background: get-color("primary");
-    @include apply-utility("weight", "semi-bold");
-    border: 1px solid get-color("primary");
-    position: relative;
+  padding: 0;
+}
 
-    &:focus {
-        outline-offset: -5px;
-      }
+[role="tablist"] li,
+[role="tablist"] a {
+  display: inline-block;
+}
+
+[role="tablist"] a {
+  text-decoration: none;
+  padding: 0.5rem 1em;
+}
+
+[role="tablist"] [aria-selected] {
+  display: inline-block;
+  pointer-events: auto;
+  cursor: pointer;
+  border-radius: 4px;
+  padding: get-size("step-0") get-size("step-1");
+  font-size: 1em;
+  color: get-color("white");
+  background: get-color("primary");
+  @include apply-utility("weight", "semi-bold");
+  border: 1px solid get-color("primary");
+  position: relative;
+
+  &:focus {
+    outline-offset: -5px;
   }
+}

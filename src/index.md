@@ -19,7 +19,7 @@ previous:
 submit:
   headline: "Submit your talk"
 baristas:
-  headline: "Your Baristas"
+  headline: "Meet your Baristas"
   member:
     - name: "Christian Schaefer"
       twitter: "derSchepp"

@@ -35,16 +35,16 @@ $gorko-size-scale: (
   // // 80px
   // "major": $gorko-base-size * 5.625,
   // // 90px
-  /* 13.33px */ "200": clamp(0.83rem, calc(0.83rem + 0vw), 0.83rem),
-  /* 15px - 16px */ "300": clamp(0.94rem, calc(0.91rem + 0.14vw), 1rem),
-  /* 17px - 19px */ "400": clamp(1.06rem, calc(0.99rem + 0.33vw), 1.2rem),
-  /* 19px - 23px */ "500": clamp(1.19rem, calc(1.07rem + 0.58vw), 1.44rem),
-  /* 21px - 28px */ "600": clamp(1.34rem, calc(1.16rem + 0.9vw), 1.73rem),
-  /* 24px - 33px */ "700": clamp(1.5rem, calc(1.24rem + 1.31vw), 2.07rem),
-  /* 27px - 40px */ "800": clamp(1.69rem, calc(1.32rem + 1.83vw), 2.49rem),
-  /* 30px - 48px */ "900": clamp(1.9rem, calc(1.4rem + 2.48vw), 2.99rem),
-  /* 34px - 58px */ "1000": clamp(2.14rem, calc(1.48rem + 3.3vw), 3.58rem),
-  /* 38px - 69px */ "major": clamp(2.41rem, calc(1.54rem + 4.33vw), 4.3rem)
+  /* 13.33px */ "step--1": clamp(0.83rem, calc(0.83rem + 0vw), 0.83rem),
+  /* 15px - 16px */ "step-0": clamp(0.94rem, calc(0.91rem + 0.14vw), 1rem),
+  /* 17px - 19px */ "step-1": clamp(1.06rem, calc(0.99rem + 0.33vw), 1.2rem),
+  /* 19px - 23px */ "step-2": clamp(1.19rem, calc(1.07rem + 0.58vw), 1.44rem),
+  /* 21px - 28px */ "step-3": clamp(1.34rem, calc(1.16rem + 0.9vw), 1.73rem),
+  /* 24px - 33px */ "step-4": clamp(1.5rem, calc(1.24rem + 1.31vw), 2.07rem),
+  /* 27px - 40px */ "step-5": clamp(1.69rem, calc(1.32rem + 1.83vw), 2.49rem),
+  /* 30px - 48px */ "step-6": clamp(1.9rem, calc(1.4rem + 2.48vw), 2.99rem),
+  /* 34px - 58px */ "step-7": clamp(2.14rem, calc(1.48rem + 3.3vw), 3.58rem),
+  /* 38px - 69px */ "step-8": clamp(2.41rem, calc(1.54rem + 4.33vw), 4.3rem)
 );
 
 /* @link https://utopia.fyi/space/calculator?c=320,14,1.125,1140,16,1.333,6,1,&s=0.75|0.5|0.25,1.5|2.25|3.375|5|8,s-l */
@@ -106,9 +106,8 @@ $gorko-config: (
   ),
   "font": (
     "items": (
-      "head": '"Bebas Neue", Impact, "Franklin Gothic Bold", sans-serif;',
-      "base": '"IBM Plex Mono", monospace',
-      "headline": "Nexa"
+      "head": "Nexa",
+      "base": '"IBM Plex Mono", monospace'
     ),
     "output": "standard",
     "property": "font-family"

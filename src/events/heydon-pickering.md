@@ -3,12 +3,13 @@ title: "Stack Of Stacks"
 date: "2021-07-29"
 time: "5PM CEST"
 speaker: "Heydon Pickering"
-twitter: "heydonworks"
 speakerImage: "heydon-pickering"
-description: "The inventor of the 'stack' pattern and co-author of Every Layout talks stacks, from their inception to their tokenisation, and interesting new possibilities for the style attribute. JavaScript optional."
 videoId: "HrkWtRqpUwg"
 videoTitle: "Stacks of Stacks"
 speakerBio: "Heydon Pickering has worked with The Paciello Group, The BBC, Smashing Magazine, and Bulb Energy as a designer, engineer, writer, editor, and illustrator. He was shortlisted for Designer Of The Year in The Net Awards. Heydon previously wrote Inclusive Design Patterns which sold over 10,000 copies. Proceeds from this title were donated to the ACLU and The Democratic Socialists Of America, to help these organizations fight fascism and create a more inclusive society."
+twitter:
+  url: "https://twitter.com/heydonworks"
+  text: "@heydonworks"
 meetupLink: #
 shared:
   websites:
@@ -38,7 +39,6 @@ shared:
   codepen:
     - url: "https://github.com/Heydon/css-scopulation-enterprise-max-ai"
       text: "CSS Scopulation Enterprise Max AI"
-  twitter:
-    - url: "https://twitter.com/heydonworks"
-      text: "@heydonworks"
 ---
+
+The inventor of the 'stack' pattern and co-author of Every Layout talks stacks, from their inception to their tokenisation, and interesting new possibilities for the style attribute. JavaScript optional.

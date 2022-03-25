@@ -43,14 +43,17 @@ h4 {
   @include apply-utility("leading", "flat");
 }
 
+// ul {
+//   padding: 0;
+// }
+
 p {
   @include apply-utility("color", "gray-50");
   @include apply-utility("leading", "loose");
-  @include apply-utility("text", "500");
+  @include apply-utility("text", "step-3");
 }
-
 p:not([class]) {
-  @include apply-utility("text", "500");
+  @include apply-utility("text", "step-1");
 }
 
 a {
@@ -76,7 +79,7 @@ main {
   );
   background-size: 100% 5rem;
   background-repeat: no-repeat;
-  padding-top: 12.5rem;
+  padding-top: 5.5rem;
 }
 
 // *:focus {
@@ -90,6 +93,7 @@ main {
 @import "blocks/form";
 @import "blocks/nav";
 @import "blocks/previous-events";
+@import "blocks/plain-html";
 @import "blocks/seperator";
 @import "blocks/single-event";
 @import "blocks/site-foot";

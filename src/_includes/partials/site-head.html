@@ -1,14 +1,14 @@
-<header role="banner" class="site-head ">
+<header role="banner" class="site-head">
   <div class="wrapper">
-    <div class="site-head__inner">
+    <div class="centerflex site-head__inner">
       <div class="ribbon">
         <div class="ribbon__color">
           <a href="/" aria-label="{{ site.name }} - home" class="site-head__brand"> {% include "partials/logo-footer.svg" %}</a>
         </div>
       </div>
-      <div class="nav-wrapper stack-500">
+      <div class="nav-wrapper stack-step-0">
         <nav
-          class="nav site-head__nav font-sans"
+          class="nav site-head__nav"
           aria-label="Primary"
         >
           <ul class="nav__list">
@@ -30,7 +30,7 @@
           </ul>
         </nav>
         {% if title !== "Home" %}
-        <a href="/" class="go-back uppercase text-500 weight-bold">< go back </a>
+        <a href="/" class="go-back uppercase text-step-0 weight-bold">< go back </a>
         {% endif %}
       </div>
     </div>

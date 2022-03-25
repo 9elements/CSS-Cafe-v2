@@ -1,10 +1,10 @@
 {% extends "layouts/base.html" %} {% block content %}
 
-<div class="wrapper stack-900">
-  <section class="previous-events stack-500">
-    <h2 class="text-900 font-headline uppercase">{{previous.headline}}</h2>
-    <div class="event-list stack-500">
-      <div class="event-list__years stack-500 tabbed">
+<div class="wrapper stack-step-8">
+  <section class="previous-events stack-step-4">
+    <h2 class="text-step-8 font-head uppercase">{{previous.headline}}</h2>
+    <div class="event-list stack-step-4">
+      <div class="event-list__years stack-step-4 tabbed">
         <ul class="cluster">
           {% for year in site.years.reverse() %}
           <li> <a href="#events{{year}}" class="">{{year}}</a>
@@ -12,7 +12,7 @@
           {% endfor %}
         </ul>
         {% for year in site.years %}
-        <section id="events{{year}}" class="stack-500">
+        <section id="events{{year}}" class="stack-step-4">
           {% for event in collections.events %}
           {% set eventYear = event.data.date | dateYearFilter %}
           {% if year == eventYear %}
@@ -30,11 +30,11 @@
     </h2>
     {% include "partials/form.html"%}
   </section> #}
-  <section class="stack-900">
-    <h2 class="text-900 font-headline uppercase center">{{baristas.headline}}</h2>
+  <section class="stack-step-8">
+    <h2 class="text-step-8 font-head uppercase center">{{baristas.headline}}</h2>
     <div class="baristas grid-switcher">
       {% for member in baristas.member %}
-      <div class="barista stack-500">
+      <div class="barista stack-step-4">
         <div class="barista__image">
           <picture>
             <source

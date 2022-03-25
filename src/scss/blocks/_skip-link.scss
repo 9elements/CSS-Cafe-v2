@@ -1,7 +1,7 @@
 .skip-link {
   position: absolute;
-  top: get-size("400");
-  left: get-size("400");
+  top: get-size("step-3");
+  left: get-size("step-3");
   z-index: 99;
 
   // @extends should be used with care, but this is a great example of them being hella useful

@@ -3,7 +3,7 @@
   pointer-events: auto;
   cursor: pointer;
   border-radius: 4px;
-  padding: get-size("300") get-size("400");
+  padding: get-size("step-1") get-size("step-2");
   font-size: 1em;
   color: get-color("white");
   background: get-color("primary");
@@ -47,5 +47,4 @@
   &:hover {
     color: get-color("primary");
   }
-
 }

@@ -1,7 +1,7 @@
-<section style="width: 100%;" class=" table-header stack-900">
-  <div class="wrapper stack-900">
+<section style="" class=" table-header stack-step-8">
+  <div class="wrapper stack-step-8">
     {% if title == "Home" %}
-    <h1 class="font-headline uppercase color-gray-100">{{hero.body}}</h1>
+    <h1 class="font-head uppercase color-gray-100 text-step-6">{{hero.body}}</h1>
     <div class="up-next">
       <div class="speaker sidebar-left" style="--sidebar-gap: 2rem">
         {% if upNext.speaker2 %}
@@ -25,23 +25,24 @@
           />      
         </div>
         {% endif %}
-        <div class="speaker__info stack-200">
-          <h2 class="text-400 weight-semi-bold ">Up next:</h2>
-          <h3 class="font-headline uppercase text-800 color-gray-100">{{upNext.topic}}</h3>
-          <p class="weight-semi-bold"><span>{{upNext.date}} {{upNext.time}}</span> <br>by {{upNext.speaker}} {% if upNext.speaker2 %} & {{upNext.speaker2}} {% endif %}</p>
+        <div class="speaker__info stack-step-1">
+          <h2 class="text-step-2 weight-semi-bold ">Up next:</h2>
+          <h3 class="font-headline uppercase text-step-3 color-gray-100">{{upNext.topic}}</h3>
+          <p class="weight-semi-bold text-step-0"><span>{{upNext.date}} {{upNext.time}}</span> <br>by {{upNext.speaker}} {% if upNext.speaker2 %} & {{upNext.speaker2}} {% endif %}</p>
           <a href="{{upNext.meetupUrl}}" class="inline-link color-secondary">Register now</a>
         </div>
       </div>
     </div>
     {% else %}
-    <h2 class="text-800 md:text-850 uppercase">{{title}}</h2>
-    <div class="talk-container sidebar-right">
+    <div>
+      <h2 class="font-head text-step-6 uppercase">{{title}}</h2>
+      <p class="text-step-2">by {{speaker}} {% if speaker2 %} & {{speaker2}} {% endif %}</p>
+    </div>
+
+    <div>
       {% if videoId %}
       {% include 'partials/youtube.html' %}
       {% endif %} 
-      <div>
-        <p class="">{{description}}</p>
-      </div>
     </div>
     {% endif %}
     </div>

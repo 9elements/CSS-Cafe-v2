@@ -12,12 +12,13 @@
 */
 
 .sidebar-left,
-.sidebar-right{
+.sidebar-right {
   display: flex;
   flex-wrap: wrap;
   align-content: flex-start;
-  align-items: flex-start;
-  gap: var(--sidebar-gap-vertical, var(--sidebar-gap, 1rem)) var(--sidebar-gap, 1rem);
+  align-items: var(--sidebar-alignment, flex-start);
+  gap: var(--sidebar-gap-vertical, var(--sidebar-gap, 1rem))
+    var(--sidebar-gap, 1rem);
 
   > * {
     flex-grow: 1;
