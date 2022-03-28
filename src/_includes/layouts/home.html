@@ -24,12 +24,7 @@
       </div>
     </div>
   </section>
-  {# <section class="contact stack-900">
-    <h2 class="uppercase font-headline center text-900">
-      {{submit.headline}}
-    </h2>
-    {% include "partials/form.html"%}
-  </section> #}
+
   <section class="stack-step-8">
     <h2 class="text-step-8 font-head uppercase center">{{baristas.headline}}</h2>
     <div class="baristas grid-switcher">
@@ -49,7 +44,7 @@
         </div>
         <div class="barista__bodytext">
           <h3>{{member.name}}</h3>
-          <p><span><svg class="barista__icon" aria-hidden="true" focusable="false">
+          <p style="display: flex; align-items: center; gap: .25rem; flex-wrap: no-wrap;"><span><svg class="barista__icon" aria-hidden="true" focusable="false">
             <use xlink:href="/icons/icons.svg#twitter" />
             </svg></span><a href="https://twitter.com/{{member.twitter}}" target= "_blank" class="inline-link">@{{member.twitter}}</a>
           </p>

@@ -13,7 +13,7 @@
   .grid-switcher {
     --dgs-column-width: Max(
       clamp(
-        (100% / var(--dgs-column-count-l, 2)) - var(--dgs-gap, 1rem),
+        (100% / var(--dgs-column-count-l, 3)) - var(--dgs-gap, 1rem),
         (var(--dgs-threshold-l, 45rem) - 100%) * 999,
         (100% / var(--dgs-column-count-m, 2)) - var(--dgs-gap, 1rem)
       ),

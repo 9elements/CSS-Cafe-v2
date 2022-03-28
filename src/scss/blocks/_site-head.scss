@@ -9,73 +9,72 @@
   background-size: 100% 5px, 100% 1px, 100% 100%;
   background-repeat: no-repeat;
   background-position: left top, left 5px, left top;
+}
+.site-head {
+  padding-top: 4px;
+  &__inner {
+    --centerflex-threshold: 55rem;
+    --centerflex-gap: 2.125rem;
+  }
 
-  .site-head {
-    padding-top: 4px;
-    &__inner {
-      --centerflex-threshold: 55rem;
-      --centerflex-gap: 2.125rem;
-    }
+  .ribbon {
+    position: relative;
+    z-index: 1;
+    width: 12.5rem;
+    height: 8.75rem;
 
-    .ribbon {
+    &__color {
+      width: 100%;
+      height: 100%;
+      background-color: #f09;
+      background-image: linear-gradient(
+          180deg,
+          rgba(0, 0, 0, 0.4) 0%,
+          rgba(255, 255, 255, 0.3) 33%,
+          rgba(255, 255, 255, 0) 100%
+        ),
+        linear-gradient(
+          315deg,
+          rgba(255, 255, 255, 0.4),
+          rgba(255, 255, 255, 0) 50%
+        );
+      background-size: 100% 12px, 4rem 4rem;
+      background-repeat: no-repeat;
+      background-position: left top, right bottom;
       position: relative;
-      z-index: 1;
-      width: 12.5rem;
-      height: 8.75rem;
-
-      &__color {
-        width: 100%;
-        height: 100%;
-        background-color: #f09;
-        background-image: linear-gradient(
-            180deg,
-            rgba(0, 0, 0, 0.4) 0%,
-            rgba(255, 255, 255, 0.3) 33%,
-            rgba(255, 255, 255, 0) 100%
-          ),
-          linear-gradient(
-            315deg,
-            rgba(255, 255, 255, 0.4),
-            rgba(255, 255, 255, 0) 50%
-          );
-        background-size: 100% 12px, 4rem 4rem;
-        background-repeat: no-repeat;
-        background-position: left top, right bottom;
-        position: relative;
-        z-index: 2;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-      }
-
-      &:before,
-      &:after {
-        content: "";
-        position: absolute;
-        width: 75%;
-        height: 100%;
-        background: #000;
-        transform: rotate(4deg) skewX(13deg);
-        right: 4px;
-        bottom: -1px;
-        z-index: 1;
-        filter: blur(3px);
-        opacity: 0.6;
-      }
-
-      &:after {
-        left: 4px;
-        right: auto;
-        transform: rotate(-2deg);
-      }
+      z-index: 2;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
 
-    &__brand {
-      svg {
-        display: block;
-        width: 10.5rem;
-        height: auto;
-      }
+    &:before,
+    &:after {
+      content: "";
+      position: absolute;
+      width: 75%;
+      height: 100%;
+      background: #000;
+      transform: rotate(4deg) skewX(13deg);
+      right: 4px;
+      bottom: -1px;
+      z-index: 1;
+      filter: blur(3px);
+      opacity: 0.6;
+    }
+
+    &:after {
+      left: 4px;
+      right: auto;
+      transform: rotate(-2deg);
+    }
+  }
+
+  &__brand {
+    svg {
+      display: block;
+      width: 10.5rem;
+      height: auto;
     }
   }
 }

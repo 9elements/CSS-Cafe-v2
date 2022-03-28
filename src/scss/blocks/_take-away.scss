@@ -1,0 +1,25 @@
+.take-away {
+  position: relative;
+  z-index: 999;
+  background-color: #302b29;
+  background-image: url("/images/Coffee-Cup.webp");
+  background-size: 22rem;
+  background-repeat: no-repeat;
+  background-position: 100% 100%;
+  //   background-position: 65rem center;
+}
+.shared-links {
+  ul {
+    list-style-type: none;
+    padding: 0;
+
+    a {
+      color: get-color("secondary");
+      text-decoration: underline;
+
+      &:hover {
+        color: get-color("primary");
+      }
+    }
+  }
+}

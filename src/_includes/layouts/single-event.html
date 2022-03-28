@@ -1,12 +1,16 @@
 {% extends "layouts/base.html" %} {% block content %}
-<section class="single-event stack-step-4">
-  <div class="talk-info stack-step-7">
-    <div class="wrapper stack-step-7">
-      <div class="plain-html stack-step-2">
-        {{ content | safe }}
-      </div>
-      <hr class="seperator">
-      <div class="speaker-info sidebar-left stack-step-4">
+  <div class="wrapper stack-step-7">
+
+  <section class="talk-details">
+    <div class="plain-html stack-step-2">
+      {{ content | safe }}
+    </div>
+  </section>
+  
+  <hr class="seperator">
+
+  <section class="speaker-bio stack-step-7">
+    <div class="speaker-info sidebar-left stack-step-4">
         <div class="speaker-info__image gap-top-step-4">
           <picture>
             <source
@@ -21,25 +25,29 @@
         </div>
         <div class="speaker-info__text stack-step-4">    
           <h2 class="font-head text-step-4 uppercase weight-bold">{{speaker}}</h2>
-          <p class="text-step-1"><span><svg class="speaker-info__icon" aria-hidden="true" focusable="false">
+          <p class="text-step-1" style="display: flex; align-items: center; gap: .25rem; flex-wrap: no-wrap;"><span><svg class="speaker-info__icon" aria-hidden="true" focusable="false" >
               <use xlink:href="/icons/icons.svg#twitter" />
             </svg></span><a href="{{twitter.url}}" target= "_blank" class="inline-link">{{twitter.text}}</a>
           </p>
           <p class="text-step-1">{{speakerBio}}</p>
         </div>
-      </div>
-      {% if speaker2 %}
-      <div class="speaker-info sidebar-right stack-step-4" style="border-bottom: none">
-        <div class="speaker-info__text stack-step-4 gap-top-step-4">    
-          <h2 class="font-headline text-step-4 uppercase weight-bold">{{speaker2}}</h2>
-          <p><span><svg class="speaker-info__icon" aria-hidden="true" focusable="false">
+    </div>
+    {% if speaker2 %}
+    <div class="speaker-info sidebar-right stack-step-4" style="border-top: 4px dotted #92d6ea">
+      <div class="speaker-info__text stack-step-4 gap-top-step-4">    
+        <h2 class="font-head text-step-4 uppercase weight-bold">{{speaker2}}</h2>
+        <p class="text-step-1" style="display: flex; align-items: center; gap: .25rem; flex-wrap: no-wrap;">
+          <span>
+            <svg class="speaker-info__icon" aria-hidden="true" focusable="false">
               <use xlink:href="/icons/icons.svg#twitter" />
-            </svg></span><a href="{{twitter2.url}}" target= "_blank" class="inline-link">{{twitter2.text}}</a>
-          </p>
-          <p class="">{{speaker2Bio}}</p>
-        </div>
-        <div class="speaker-info__image gap-top-step-4">
-          <picture>
+            </svg>
+          </span>
+          <a href="{{twitter2.url}}" target= "_blank" class="inline-link">{{twitter2.text}}</a>
+        </p>
+        <p class="text-step-1">{{speaker2Bio}}</p>
+      </div>
+      <div class="speaker-info__image gap-top-step-4">
+        <picture>
           <source
             srcset="/images/speaker/{{speaker2Image}}.webp"
             type="image/webp"
@@ -48,64 +56,32 @@
             src="/images/speaker/{{speaker2Image}}.jpg"
             alt="Portrait of {{speaker2}}"
           />
-          </picture>
-        </div>
-      {% endif %}
+        </picture>
       </div>
-      <div class="wrapper">
-        <div class="shared-links stack-step-7">
-          {% if shared.websites %}
-          <div class="stack-step-1">
-          <h3 class="font-head text-step-4">Websites</h3>
-          <ul class="stack-step-1">
-            {% for item in shared.websites %}
-            <li><a href="{{item.url}}" target="_blank" >{{item.text}} </a>
-            </li>
-            {% endfor %}
-          </ul>
-          </div>
-          {% endif %}
-          
-          
-          {% if shared.youtube %}
-          <div class="stack-step-1">
-          <h3 class="font-head text-step-4">Youtube</h3>
-          <ul class="stack-step-1">
-            {% for item in shared.youtube %}
-            <li><a href="{{item.url}}" target="_blank" style >{{item.text}} </a>
-            </li>
-            {% endfor %}
-          </ul>
-          </div>
-          {% endif %}
-          {% if shared.codepen %}
-          <div class="stack-step-1">
-          <h3 class="font-head text-step-4">Codepens</h3>
-          <ul class="stack-step-1">
-            {% for item in shared.codepen %}
-            <li><a href="{{item.url}}" target="_blank" style >{{item.text}} </a>
-            </li>
-            {% endfor %}
-          </ul>
-          </div>
-          {% endif %}
-           <hr class="seperator">
         </div>
-       
-      </div>  
+    {% endif %}
       
-      <div class="wrapper stack-step-2">
-      <h3 class="font-head text-step-4">Similar Events</h3>
-      <div class="featured ">
+  </section>
+  <hr class="seperator">
+
+  {% if shared %}
+  <section class="take-away">
+    {% include "partials/take-away.html" %}
+  </section>
+   <hr class="seperator">
+  {% endif %}
+
+  <section class="featured-events" >
+    <h3 class="font-head text-step-4">Similar Events</h3>
+      <div class="featured grid-switcher" style="--dgs-column-count-l: 3; --dgs-column-count-m: 1;">
         {% for event in collections.events | limit(3) %}
           {% set eventYear = event.data.date | dateYearFilter %}
-            {% include "partials/previous-event.html" %}
+          <div>
+            {% include "partials/similar-events.html" %}
+          </div>
           {% endfor %} 
       </div>
-      </div>  
-       
-  </div>
+  </section>
 
-</section>
-
+ </div>
 {% endblock %}
