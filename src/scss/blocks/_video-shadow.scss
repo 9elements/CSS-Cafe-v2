@@ -1,5 +1,44 @@
 .video-shadow {
+  // Generated with utopia. Start very low and increase to 1.5 rem at 520px viewport width
+  --video-offset: clamp(0.88rem, calc(-0.12rem + 5vw), 1.5rem);
   position: relative;
   z-index: 2;
-  margin-bottom: -1.5rem;
+  margin-bottom: calc(var(--video-offset) * -1);
+  max-width: 50rem;
+  box-shadow: 0 5px 0 #fff inset;
+
+  > * {
+    position: relative;
+    z-index: 2;
+  }
+
+  &:before {
+    --shadow-height: 0.0625rem;
+    --shadow-offset: 0.125rem;
+    content: "";
+    width: calc(100% + 2 * var(--shadow-offset));
+    height: var(--shadow-height);
+    position: absolute;
+    left: calc(var(--shadow-offset) * -1);
+    bottom: calc(var(--shadow-height) * -0.5);
+    border-radius: 1rem / 50%;
+    background: #000;
+    box-shadow: 0 0 4px 4px #000;
+    opacity: 0.2;
+  }
+
+  &:after {
+    content: "";
+    height: calc(var(--video-offset) - 4px);
+    width: 100%;
+    position: absolute;
+    left: -3px;
+    bottom: 0;
+    transform: skewX(40deg);
+    transform-origin: left bottom;
+    z-index: 1;
+    background: #000;
+    box-shadow: 0 0 4px 4px #000;
+    opacity: 0.3;
+  }
 }

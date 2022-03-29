@@ -68,13 +68,19 @@ $gorko-colors: (
   * to enabling/disabling pre-built components/utilities.
   */
 $gorko-config: (
+  "css-vars": (
+    "color": $gorko-colors,
+    "space": $space-size-scale
+  ),
   "bg": (
-    "items": $gorko-colors,
+    "items": color,
+    "css-vars": true,
     "output": "standard",
     "property": "background-color"
   ),
   "color": (
-    "items": $gorko-colors,
+    "items": color,
+    "css-vars": true,
     "output": "standard",
     "property": "color"
   ),

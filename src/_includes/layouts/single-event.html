@@ -2,13 +2,15 @@
 
 {% block content %}
   <div class="wrapper stack-step-7">
-    <section class="talk-details">
-      <div class="plain-html stack-step-2">
-        {{ content | safe }}
-      </div>
-    </section>
+    {% if videoId %}
+      <section class="talk-details">
+        <div class="plain-html stack-step-2">
+          {{ content | safe }}
+        </div>
+      </section>
 
-    <hr class="seperator">
+      <hr class="seperator">
+    {% endif %}
 
     <section class="speaker-bio stack-step-7">
       <div class="speaker-info sidebar-left stack-step-4">
