@@ -1,75 +1,15 @@
-<section style="" class=" table-header stack-step-8">
+<section class="table-header">
   <div class="wrapper stack-step-8">
-    {% if title == "Home" %}
-    <h1 class="font-head uppercase color-gray-100 text-step-6">{{hero.body}}</h1>
-    <div class="up-next">
-      <div class="speaker sidebar-left" style="--sidebar-gap: 2rem">
-        {% if upNext.speaker2 %}
-        <div class="speaker__image"> 
-          <img
-            style="width: 50%"
-            src="{{upNext.speakerImage}}"
-            alt="Image of {{upNext.speaker}}"
-          />
-          <img
-            style="width: 50%; border-left: 2px solid #fff"
-            src="{{upNext.speaker2Image}}"
-            alt="Image of {{upNext.speaker2}}"
-          />
-        </div>
-        {% else %}
-        <div class="speaker__image"> 
-          <img
-            src="{{upNext.speakerImage}}"
-            alt="Image of {{upNext.speaker}}"
-          />      
-        </div>
-        {% endif %}
-        <div class="speaker__info stack-step-1">
-          <h2 class="text-step-2 weight-semi-bold ">Up next:</h2>
-          <h3 class="font-headline uppercase text-step-3 color-gray-100">{{upNext.topic}}</h3>
-          <p class="weight-semi-bold text-step-0"><span>{{upNext.date}} {{upNext.time}}</span> <br>by {{upNext.speaker}} {% if upNext.speaker2 %} & {{upNext.speaker2}} {% endif %}</p>
-          <a href="{{upNext.meetupUrl}}" class="inline-link color-secondary">Register now</a>
-        </div>
-      </div>
-    </div>
-    {% else %}
     <div>
       <h2 class="font-head text-step-6 uppercase">{{title}}</h2>
       <p class="text-step-2">by {{speaker}} {% if speaker2 %} & {{speaker2}} {% endif %}</p>
     </div>
 
-    <div>
-      {% if videoId %}
-      {% include 'partials/youtube.html' %}
-      {% endif %} 
-    </div>
+    {% if videoId %}
+      <div class="video-shadow">
+        {% include 'partials/youtube.html' %}
+      </div>
     {% endif %}
-    </div>
-
-    {% if title == "Home" %}
-      <div class="table">
-      <picture>
-        <source srcset="
-        /images/coffee/611-mockup.avif 611w,
-          /images/coffee/1222-mockup.avif 1222w" 
-          type="image/avif"
-          sizes="(min-width: 510px) 611px, 120vw">
-        <source srcset="
-        /images/coffee/611-mockup.webp 611w,
-          /images/coffee/1222-mockup.webp 1222w" 
-          type="image/webp"
-          sizes="(min-width: 510px) 611px, 120vw">
-        <img srcset="
-        /images/coffee/611-mockup.png 611w,
-          /images/coffee/1222-mockup.png 1222w" 
-          src="/images/coffee/611-mockup.png" 
-          sizes="(min-width: 510px) 611px, 120vw"
-          alt="" />
-      </picture>
-    {% else %}
-    <div class="table" style="margin-top:0;">
-    {% endif %}
-    
   </div>
+  <div class="table"></div>
 </section>

@@ -1,4 +1,5 @@
 {
   "layout": "layouts/single-event.html",
-  "permalink": "/{{ title | slug }}/index.html"
+  "permalink": "/{{ title | slug }}/index.html",
+  "masthead": "content"
 }

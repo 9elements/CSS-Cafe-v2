@@ -1,16 +1,17 @@
-{% extends "layouts/base.html" %} {% block content %}
+{% extends "layouts/base.html" %}
+
+{% block content %}
   <div class="wrapper stack-step-7">
+    <section class="talk-details">
+      <div class="plain-html stack-step-2">
+        {{ content | safe }}
+      </div>
+    </section>
 
-  <section class="talk-details">
-    <div class="plain-html stack-step-2">
-      {{ content | safe }}
-    </div>
-  </section>
-  
-  <hr class="seperator">
+    <hr class="seperator">
 
-  <section class="speaker-bio stack-step-7">
-    <div class="speaker-info sidebar-left stack-step-4">
+    <section class="speaker-bio stack-step-7">
+      <div class="speaker-info sidebar-left stack-step-4">
         <div class="speaker-info__image gap-top-step-4">
           <picture>
             <source
@@ -23,7 +24,7 @@
             />
           </picture>
         </div>
-        <div class="speaker-info__text stack-step-4">    
+        <div class="speaker-info__text stack-step-4">
           <h2 class="font-head text-step-4 uppercase weight-bold">{{speaker}}</h2>
           <p class="text-step-1" style="display: flex; align-items: center; gap: .25rem; flex-wrap: no-wrap;"><span><svg class="speaker-info__icon" aria-hidden="true" focusable="false" >
               <use xlink:href="/icons/icons.svg#twitter" />
@@ -31,58 +32,54 @@
           </p>
           <p class="text-step-1">{{speakerBio}}</p>
         </div>
-    </div>
-    {% if speaker2 %}
-    <hr class="seperator">
-    <div class="speaker-info sidebar-right stack-step-4">
-      <div class="speaker-info__text stack-step-4 gap-top-step-4">    
-        <h2 class="font-head text-step-4 uppercase weight-bold">{{speaker2}}</h2>
-        <p class="text-step-1" style="display: flex; align-items: center; gap: .25rem; flex-wrap: no-wrap;">
-          <span>
-            <svg class="speaker-info__icon" aria-hidden="true" focusable="false">
-              <use xlink:href="/icons/icons.svg#twitter" />
-            </svg>
-          </span>
-          <a href="{{twitter2.url}}" target= "_blank" class="inline-link">{{twitter2.text}}</a>
-        </p>
-        <p class="text-step-1">{{speaker2Bio}}</p>
       </div>
-      <div class="speaker-info__image gap-top-step-4">
-        <picture>
-          <source
-            srcset="/images/speaker/{{speaker2Image}}.webp"
-            type="image/webp"
-          />
-          <img
-            src="/images/speaker/{{speaker2Image}}.jpg"
-            alt="Portrait of {{speaker2}}"
-          />
-        </picture>
-      </div>
+      {% if speaker2 %}
+        <hr class="seperator">
+        <div class="speaker-info sidebar-right stack-step-4">
+          <div class="speaker-info__text stack-step-4 gap-top-step-4">
+            <h2 class="font-head text-step-4 uppercase weight-bold">{{speaker2}}</h2>
+            <p class="text-step-1" style="display: flex; align-items: center; gap: .25rem; flex-wrap: no-wrap;">
+              <span>
+                <svg class="speaker-info__icon" aria-hidden="true" focusable="false">
+                  <use xlink:href="/icons/icons.svg#twitter" />
+                </svg>
+              </span>
+              <a href="{{twitter2.url}}" target= "_blank" class="inline-link">{{twitter2.text}}</a>
+            </p>
+            <p class="text-step-1">{{speaker2Bio}}</p>
+          </div>
+          <div class="speaker-info__image gap-top-step-4">
+            <picture>
+              <source
+                srcset="/images/speaker/{{speaker2Image}}.webp"
+                type="image/webp"
+              />
+              <img
+                src="/images/speaker/{{speaker2Image}}.jpg"
+                alt="Portrait of {{speaker2}}"
+              />
+            </picture>
+          </div>
         </div>
+      {% endif %}
+    </section>
+
+    <hr class="seperator">
+
+    {% if shared %}
+      <section class="take-away">
+        {% include "partials/take-away.html" %}
+      </section>
+      <hr class="seperator">
     {% endif %}
-      
-  </section>
-  <hr class="seperator">
 
-  {% if shared %}
-  <section class="take-away">
-    {% include "partials/take-away.html" %}
-  </section>
-   <hr class="seperator">
-  {% endif %}
-
-  <section class="featured-events stack-step-1">
+    <section class="featured-events stack-step-1">
       <div class="featured switcher" style="--switcher-threshold: 45rem;">
         {% for event in collections.events | limit(3) %}
           {% set eventYear = event.data.date | dateYearFilter %}
-          
-            {% include "partials/similar-events.html" %}
-          
-          {% endfor %} 
-          
+          {% include "partials/similar-events.html" %}
+        {% endfor %}
       </div>
-  </section>
-
- </div>
+    </section>
+  </div>
 {% endblock %}
