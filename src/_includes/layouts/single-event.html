@@ -33,7 +33,8 @@
         </div>
     </div>
     {% if speaker2 %}
-    <div class="speaker-info sidebar-right stack-step-4" style="border-top: 4px dotted #92d6ea">
+    <hr class="seperator">
+    <div class="speaker-info sidebar-right stack-step-4">
       <div class="speaker-info__text stack-step-4 gap-top-step-4">    
         <h2 class="font-head text-step-4 uppercase weight-bold">{{speaker2}}</h2>
         <p class="text-step-1" style="display: flex; align-items: center; gap: .25rem; flex-wrap: no-wrap;">
@@ -71,15 +72,15 @@
    <hr class="seperator">
   {% endif %}
 
-  <section class="featured-events" >
-    <h3 class="font-head text-step-4">Similar Events</h3>
-      <div class="featured grid-switcher" style="--dgs-column-count-l: 3; --dgs-column-count-m: 1;">
+  <section class="featured-events stack-step-1">
+      <div class="featured switcher" style="--switcher-threshold: 45rem;">
         {% for event in collections.events | limit(3) %}
           {% set eventYear = event.data.date | dateYearFilter %}
-          <div>
+          
             {% include "partials/similar-events.html" %}
-          </div>
+          
           {% endfor %} 
+          
       </div>
   </section>
 

@@ -1,15 +1,15 @@
-<article class="event-teaser bg-white" >
-  <p class="event-teaser__date color-dark bg-gray uppercase text-step-2">
+<article class="event-card bg-white" >
+  <p class="event-card__date color-dark bg-gray uppercase text-step-2">
     {{event.data.date | dateFilter}}
   </p>
-  <div class="event-teaser__body">
-    <div class="event-teaser__info">
-      <a href="{{ event.url }}" class="event-teaser__link"></a>
+    <div class="event-card__info stack-step--1">
+      <a href="{{ event.url }}" class="event-card__link"></a>
       <p class="color-gray-800 text-step-2 md:text-step-3 weight-bold"><span class="color-gray-600 text-step-0">{{event.data.speaker}} {% if event.data.speaker2 %} & {{event.data.speaker2}} {% endif %}<span class="sr-only">:</span></span>{{event.data.title}}
       </p>
-      <div class="button button--secondary" aria-hidden="true">View Event</div>
     </div>
-    
+    <div style="margin-top: auto;">
+    <div class="button button--secondary" aria-hidden="true" style="width: 100%; text-align: center; margin-top: auto; justify-self: flex-end;">View Event</div>
+
   </div>
 
 </article>

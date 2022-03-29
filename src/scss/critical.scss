@@ -90,6 +90,7 @@ main {
 //Blocks
 @import "blocks/baristas";
 @import "blocks/button";
+@import "blocks/event-card";
 @import "blocks/form";
 @import "blocks/nav";
 @import "blocks/previous-events";
@@ -114,5 +115,6 @@ main {
 @import "layout/centerflex";
 @import "layout/cluster";
 @import "layout/grid-switcher";
+@import "layout/switcher";
 @import "layout/sidebar";
 @import "layout/wrapper";

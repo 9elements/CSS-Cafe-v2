@@ -32,8 +32,8 @@
     );
 
     gap:
-        /* Vertical Gap */ var(--dgs-gap-vertical, var(--dgs-gap, 2rem))
-      /* Horizontal Gap */ var(--dgs-gap, 2rem);
+        /* Vertical Gap */ var(--dgs-gap-vertical, var(--dgs-gap, 1rem))
+      /* Horizontal Gap */ var(--dgs-gap, 1rem);
 
     > * {
       max-width: unset;
