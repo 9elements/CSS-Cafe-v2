@@ -6,7 +6,8 @@ speaker: "Nils Binder"
 speakerImage: "nils-binder"
 videoId: "6-258RYZg0o"
 videoTitle: "Everything you never wanted to know about CSS backgrounds"
-speakerBio: 'Nils moves between two worlds — continuously striving to improve the communication between designers and developers. Starting as a so-called web-designer in 1999, he now calls himself "frontend designer." He worked for a wide variety of clients, from startups to global players. Also, he is an origami enthusiast spending hours folding paper.'
+speakerBio: |-
+  Nils moves between two worlds — continuously striving to improve the communication between designers and developers. Starting as a so-called web-designer in 1999, he now calls himself "frontend designer." He worked for a wide variety of clients, from startups to global players. Also, he is an origami enthusiast spending hours folding paper.
 twitter:
   url: "https://twitter.com/supremebeing09"
   text: "@supremebeing09"

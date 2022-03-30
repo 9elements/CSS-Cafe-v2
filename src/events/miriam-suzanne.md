@@ -6,7 +6,8 @@ speaker: "Miriam Suzanne"
 speakerImage: "miriam-suzanne"
 videoId: "ilR9KlsHMGk"
 videoTitle: "Container Queries & The Future of CSS"
-speakerBio: "Miriam is an author, artist, and UX engineer. She’s spent nearly 20 years learning, teaching, collaborating, and building web software as a co-founder of OddBird; Invited Expert with the W3C CSS Working Group; staff writer for CSS Tricks; and member of the Sass core team."
+speakerBio: |-
+  Miriam is an author, artist, and UX engineer. She’s spent nearly 20 years learning, teaching, collaborating, and building web software as a co-founder of OddBird; Invited Expert with the W3C CSS Working Group; staff writer for CSS Tricks; and member of the Sass core team.
 twitter:
   url: "https://twitter.com/TerribleMia"
   text: "@TerribleMia"

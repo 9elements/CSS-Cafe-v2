@@ -1,12 +1,40 @@
 .take-away {
+  // min-height: 10rem;
   position: relative;
-  z-index: 999;
-  background-color: #302b29;
-  background-image: url("/images/Coffee-Cup.webp");
-  background-size: 22rem;
-  background-repeat: no-repeat;
-  background-position: 100% 100%;
+  // z-index: 999;
+  // background-color: #302b29;
+  // background-image: url("/images/Coffee-Cup.webp");
+  // background-size: 22rem;
+  // background-repeat: no-repeat;
+  // background-position: 100% 100%;
   //   background-position: 65rem center;
+
+  .decoration {
+    padding-right: 3.5rem;
+    position: absolute;
+    top: -8rem;
+    right: -12rem;
+    width: 27.52125rem;
+    overflow-x: hidden;
+    display: none;
+
+    @include media-query("md") {
+      display: block;
+    }
+  }
+
+  .lettering {
+    position: absolute;
+    top: 9rem;
+    right: 4rem;
+    width: 10.613125rem;
+    overflow-x: hidden;
+    display: none;
+
+    @include media-query("md") {
+      display: block;
+    }
+  }
 }
 .shared-links {
   ul {

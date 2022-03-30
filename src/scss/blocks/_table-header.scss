@@ -13,10 +13,14 @@
 
   .up-next {
     min-height: 35em;
-    // max-width: 50%;
+    margin-bottom: 15rem;
 
+    @include media-query("md") {
+      margin-bottom: 0;
+    }
     @include media-query("lg") {
-      min-height: 12em;
+      min-height: 25em;
+      margin-bottom: 0;
     }
   }
 }

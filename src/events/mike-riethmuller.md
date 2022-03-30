@@ -4,10 +4,11 @@ date: "2020-11-26"
 time: "6PM CEST"
 speaker: "Mike Riethmuller"
 speakerImage: "mike-riethmuller"
-videoId : "iHD642POoR8"
+videoId: "iHD642POoR8"
 videoTitle: "History of Container Queries"
-speakerBio: "Mike is a CSS aficionado, co-creator of the unofficial official gif for CSS. He enjoys making rad web stuff with rad people and been contracting, consulting or freelancing for the last 10, but still has no idea which one it is.
-Need more.... Mike lives in Sydney Australia but loves Germany. Before Covid he once went to Berlin 4 times in one year. Customs thinks he might be a drug runner."
+speakerBio: |-
+  Mike is a CSS aficionado, co-creator of the unofficial official gif for CSS. He enjoys making rad web stuff with rad people and been contracting, consulting or freelancing for the last 10, but still has no idea which one it is.
+  Need more.... Mike lives in Sydney Australia but loves Germany. Before Covid he once went to Berlin 4 times in one year. Customs thinks he might be a drug runner.
 twitter:
   url: "https://twitter.com/MikeRiethmuller"
   text: "@MikeRiethmuller"
@@ -27,8 +28,6 @@ shared:
       text: "Talk from Melbourne CSS"
     - url: "https://www.youtube.com/watch?v=mAvQUIKtW_Y"
       text: "Video on Fluid Typography"
-
- 
 ---
 
 The idea of container queries has been floating around for at least a decade. Let's take a look at the evolution of this idea, the challenges, why it hasn't been implemented, its future, and algorithmic layouts we can achieve with CSS today.

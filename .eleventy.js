@@ -45,8 +45,8 @@ module.exports = (config) => {
 
   // Only minify HTML if we are in production because it slows builds _right_ down
   if (isProduction) {
-    config.addTransform("htmlmin", htmlMinTransform);
     config.addTransform("purgeCSS", purgeCSS);
+    config.addTransform("htmlmin", htmlMinTransform);
   }
 
   config.addCollection("events", (collection) => {

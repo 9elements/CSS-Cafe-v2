@@ -31,9 +31,8 @@ module.exports = {
    * @param {Boolean} random=true Wether or not this should be randomised
    * @returns {Array} The resulting collection
    */
-  getSiblingContent(collection, item, limit = 3, random = true) {
+  getSiblingContent(collection, item, limit = 3, random = false) {
     let filteredItems = collection.filter((x) => x.url !== item.url);
-
     if (random) {
       let counter = filteredItems.length;
 
@@ -70,5 +69,5 @@ module.exports = {
    */
   filterCollectionByKeys(collection, keys) {
     return collection.filter((x) => keys.includes(x.data.key));
-  },
+  }
 };

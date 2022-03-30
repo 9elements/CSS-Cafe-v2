@@ -2,7 +2,7 @@
   <p class="event-card__date color-dark bg-gray uppercase text-step-2">
     {{event.data.date | dateFilter}}
   </p>
-    <div class="event-card__info stack-step--1">
+    <div class="event-card__info stack-m">
       <a href="{{ event.url }}" class="event-card__link"></a>
       <p class="color-gray-800 text-step-2 md:text-step-3 weight-bold"><span class="color-gray-600 text-step-0">{{event.data.speaker}} {% if event.data.speaker2 %} & {{event.data.speaker2}} {% endif %}<span class="sr-only">:</span></span>{{event.data.title}}
       </p>

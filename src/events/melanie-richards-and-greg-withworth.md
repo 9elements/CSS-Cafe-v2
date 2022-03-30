@@ -6,10 +6,12 @@ speaker: "Melanie Richards"
 speakerImage: "melanie-richards"
 videoId: "dJY9FmaDpFE"
 videoTitle: "Open UI:​ Solving a Multi-Decade Problem"
-speakerBio: "Melanie Richards is a product manager with a background in web design and development. She's currently helping shape new web technologies on the Microsoft Edge web platform team. She loves designing and building fun things for the web, and dabbling in 3D art."
+speakerBio: |-
+  Melanie Richards is a product manager with a background in web design and development. She's currently helping shape new web technologies on the Microsoft Edge web platform team. She loves designing and building fun things for the web, and dabbling in 3D art.
 speaker2: "Greg Whitworth"
 speaker2Image: "greg-whitworth"
-speaker2Bio: "Greg Whitworth is Director of Lightning Web Components, Lightning Application Services, and Standards & Web Platform at Salesforce. He co-chairs the Open UI Community Group and is a member of the CSSWG of the W3C."
+speaker2Bio: |-
+  Greg Whitworth is Director of Lightning Web Components, Lightning Application Services, and Standards & Web Platform at Salesforce. He co-chairs the Open UI Community Group and is a member of the CSSWG of the W3C.
 twitter:
   url: "https://twitter.com/soMelanieSaid"
   text: "@soMelanieSaid"

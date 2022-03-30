@@ -6,7 +6,8 @@ speaker: "Hidde de Vries"
 speakerImage: "hidde-de-vries"
 videoId: "pzZpe3fo8Xs"
 videoTitle: "On the Origin of Cascades"
-speakerBio: "Hidde is a front-end web developer who prioritises what users see and interact with. To him, accessibility and performance are essential aspects of building front-ends."
+speakerBio: |-
+  Hidde is a front-end web developer who prioritises what users see and interact with. To him, accessibility and performance are essential aspects of building front-ends.
 twitter:
   url: "https://twitter.com/hdv"
   text: "@hdv"

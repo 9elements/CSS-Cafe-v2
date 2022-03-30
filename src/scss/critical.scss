@@ -30,6 +30,7 @@ body {
   @include apply-utility("bg", "dark");
   @include apply-utility("weight", "regular");
   line-height: 1.5;
+  overflow-x: hidden;
   // background-image: url("/images/bg.svg");
   // background-repeat: no-repeat;
   // //background-position: 100% 100%;
@@ -118,4 +119,5 @@ main {
 @import "layout/grid-switcher";
 @import "layout/switcher";
 @import "layout/sidebar";
+@import "layout/stack";
 @import "layout/wrapper";

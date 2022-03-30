@@ -6,7 +6,8 @@ speaker: "Manuel Matuzović"
 speakerImage: "manuel-matuzovic"
 videoId: "Gm8GAB5SF5c"
 videoTitle: "Writing even more CSS with Accessibility in Mind"
-speakerBio: "Manuel is a front-end developer from Vienna, specialized in HTML, CSS, accessibility, and performance. He likes to write about these topics and talk at meetups and conferences. He’s organizer of the webclerks conference in Vienna, and he maintains htmhell.dev and frontendbookmarks.com."
+speakerBio: |-
+  Manuel is a front-end developer from Vienna, specialized in HTML, CSS, accessibility, and performance. He likes to write about these topics and talk at meetups and conferences. He’s organizer of the webclerks conference in Vienna, and he maintains htmhell.dev and frontendbookmarks.com.
 twitter:
   url: "https://twitter.com/mmatuzo"
   text: "@mmatuzo"

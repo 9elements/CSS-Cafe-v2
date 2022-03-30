@@ -4,7 +4,8 @@ date: "2020-06-25"
 time: "5PM CEST"
 speaker: "Ana Tudor"
 speakerImage: "ana-tudor"
-speakerBio: "Not a dev, designer and most certainly not a role model. Just a stray cat trying to survive."
+speakerBio: |-
+  Not a dev, designer and most certainly not a role model. Just a stray cat trying to survive.
 twitter:
   url: "https://twitter.com/anatudor"
   text: "@anatudor"

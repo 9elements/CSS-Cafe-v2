@@ -1,10 +1,10 @@
 {% extends "layouts/base.html" %}
 
 {% block content %}
-  <div class="wrapper stack-step-7">
+  <div class="wrapper stack-2xl">
     {% if videoId %}
       <section class="talk-details">
-        <div class="plain-html stack-step-2">
+        <div class="plain-html stack-m">
           {{ content | safe }}
         </div>
       </section>
@@ -12,8 +12,8 @@
       <hr class="seperator">
     {% endif %}
 
-    <section class="speaker-bio stack-step-7">
-      <div class="speaker-info sidebar-left stack-step-4">
+    <section class="speaker-bio stack-2xl">
+      <div class="speaker-info sidebar-left stack-l">
         <div class="speaker-info__image gap-top-step-4">
           <picture>
             <source
@@ -26,19 +26,19 @@
             />
           </picture>
         </div>
-        <div class="speaker-info__text stack-step-4">
+        <div class="speaker-info__text stack-l">
           <h2 class="font-head text-step-4 uppercase weight-bold">{{speaker}}</h2>
           <p class="text-step-1" style="display: flex; align-items: center; gap: .25rem; flex-wrap: no-wrap;"><span><svg class="speaker-info__icon" aria-hidden="true" focusable="false" >
               <use xlink:href="/icons/icons.svg#twitter" />
             </svg></span><a href="{{twitter.url}}" target= "_blank" class="inline-link">{{twitter.text}}</a>
           </p>
-          <p class="text-step-1">{{speakerBio}}</p>
+          <div class="text-step-1 stack-s">{{ speakerBio | markdownFilter | safe }}</div>
         </div>
       </div>
       {% if speaker2 %}
         <hr class="seperator">
-        <div class="speaker-info sidebar-right stack-step-4">
-          <div class="speaker-info__text stack-step-4 gap-top-step-4">
+        <div class="speaker-info sidebar-right stack-l">
+          <div class="speaker-info__text stack-l gap-top-step-4">
             <h2 class="font-head text-step-4 uppercase weight-bold">{{speaker2}}</h2>
             <p class="text-step-1" style="display: flex; align-items: center; gap: .25rem; flex-wrap: no-wrap;">
               <span>
@@ -48,7 +48,7 @@
               </span>
               <a href="{{twitter2.url}}" target= "_blank" class="inline-link">{{twitter2.text}}</a>
             </p>
-            <p class="text-step-1">{{speaker2Bio}}</p>
+            <p class="text-step-1">{{speaker2Bio | markdownFilter | safe}}</p>
           </div>
           <div class="speaker-info__image gap-top-step-4">
             <picture>
@@ -70,14 +70,16 @@
 
     {% if shared %}
       <section class="take-away">
+        <img src="/images/Coffee-Cup.webp" alt="" class="decoration">
+        <img src="/images/take-away.svg" alt="" class="lettering">
         {% include "partials/take-away.html" %}
       </section>
       <hr class="seperator">
     {% endif %}
 
-    <section class="featured-events stack-step-1">
+    <section class="featured-events stack-s">
       <div class="featured switcher" style="--switcher-threshold: 45rem;">
-        {% for event in collections.events | limit(3) %}
+        {% for event in helpers.getSiblingContent(collections.events, page ) %}
           {% set eventYear = event.data.date | dateYearFilter %}
           {% include "partials/similar-events.html" %}
         {% endfor %}

@@ -6,7 +6,8 @@ speaker: "Hui Jing Chen"
 speakerImage: "hui-jing-chen"
 videoId: "nwmPsqX4q4I"
 videoTitle: "Demystify Modern CSS Layouts with DevTools"
-speakerBio: "Chen Hui Jing is a self-taught designer and developer living in Singapore, with an inordinate love for CSS, as evidenced by her blog, that is mostly about CSS, and her tweets, which are largely about typography and the web. She used to play basketball full-time and launched her web career during downtime between training sessions. Hui Jing is currently focusing on growing developer engagement around the APAC region."
+speakerBio: |-
+  Chen Hui Jing is a self-taught designer and developer living in Singapore, with an inordinate love for CSS, as evidenced by her blog, that is mostly about CSS, and her tweets, which are largely about typography and the web. She used to play basketball full-time and launched her web career during downtime between training sessions. Hui Jing is currently focusing on growing developer engagement around the APAC region.
 twitter:
   url: "https://twitter.com/hj_chen"
   text: "@hj_chen"

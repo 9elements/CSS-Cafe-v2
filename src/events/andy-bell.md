@@ -6,7 +6,8 @@ speaker: "Andy Bell"
 speakerImage: "andy-bell"
 videoId: "Sb4Ae466xbs"
 videoTitle: "Keeping it simple with CSS that scales"
-speakerBio: "Andy is a freelance web designer with a laser focus on web standards, progressive enhancement and accessibility. He co-authored Every Layout and also curates the CSS newsletter, Piccalilli."
+speakerBio: |-
+  Andy is a freelance web designer with a laser focus on web standards, progressive enhancement and accessibility. He co-authored Every Layout and also curates the CSS newsletter, Piccalilli.
 twitter:
   url: "https://twitter.com/piccalilli_"
   text: "@piccalilli_"

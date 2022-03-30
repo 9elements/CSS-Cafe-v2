@@ -6,7 +6,8 @@ speaker: "Kilian Valkhof"
 speakerImage: "kilian-valkhof"
 videoId: "mKuNUCm9feM"
 videoTitle: "Beyond responsive design: new and future media queries"
-speakerBio: 'Kilian Valkhof is the creator of Polypane, the browser for building websites. He wrote his first article on mobile web design all the way back in 2008 (with an exciting look ahead at "media features"!) and has not stopped thinking about responsive websites since. Kilian is a solo developer building his and hopefully your dream browser, he writes about the web on kilianvalkhof.com and anywhere else he is allowed to, and is an active open source contributor.'
+speakerBio: |-
+  Kilian Valkhof is the creator of Polypane, the browser for building websites. He wrote his first article on mobile web design all the way back in 2008 (with an exciting look ahead at "media features"!) and has not stopped thinking about responsive websites since. Kilian is a solo developer building his and hopefully your dream browser, he writes about the web on kilianvalkhof.com and anywhere else he is allowed to, and is an active open source contributor.
 meetupLink: "#"
 twitter:
   url: "https://twitter.com/kilianvalkhof"

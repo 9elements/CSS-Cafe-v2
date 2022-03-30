@@ -6,7 +6,8 @@ speaker: "Heydon Pickering"
 speakerImage: "heydon-pickering"
 videoId: "HrkWtRqpUwg"
 videoTitle: "Stacks of Stacks"
-speakerBio: "Heydon Pickering has worked with The Paciello Group, The BBC, Smashing Magazine, and Bulb Energy as a designer, engineer, writer, editor, and illustrator. He was shortlisted for Designer Of The Year in The Net Awards. Heydon previously wrote Inclusive Design Patterns which sold over 10,000 copies. Proceeds from this title were donated to the ACLU and The Democratic Socialists Of America, to help these organizations fight fascism and create a more inclusive society."
+speakerBio: |-
+  Heydon Pickering has worked with The Paciello Group, The BBC, Smashing Magazine, and Bulb Energy as a designer, engineer, writer, editor, and illustrator. He was shortlisted for Designer Of The Year in The Net Awards. Heydon previously wrote Inclusive Design Patterns which sold over 10,000 copies. Proceeds from this title were donated to the ACLU and The Democratic Socialists Of America, to help these organizations fight fascism and create a more inclusive society.
 twitter:
   url: "https://twitter.com/heydonworks"
   text: "@heydonworks"
