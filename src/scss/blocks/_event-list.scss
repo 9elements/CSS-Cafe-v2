@@ -1,0 +1,7 @@
+.event-list {
+  &__years {
+    --cluster-gap: var(--space-m);
+    --cluster-gap-vertical: var(--space-xl);
+    --cluster-justification: center;
+  }
+}

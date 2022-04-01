@@ -9,7 +9,7 @@
 
 [role="tablist"] a {
   text-decoration: none;
-  padding: 0.5rem 1em;
+  padding: var(--space-2xs) var(--space-s);
 }
 
 [role="tablist"] [aria-selected] {
@@ -17,13 +17,12 @@
   pointer-events: auto;
   cursor: pointer;
   border-radius: 4px;
-  padding: get-size("step-0") get-size("step-1");
+  padding: var(--space-xs) var(--space-s);
   font-size: 1em;
   color: get-color("white");
   background: get-color("primary");
   @include apply-utility("weight", "semi-bold");
   border: 1px solid get-color("primary");
-  position: relative;
 
   &:focus {
     outline-offset: -5px;

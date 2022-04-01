@@ -5,7 +5,7 @@
  */
 .wrapper {
   max-width: 63.75rem;
-  padding: 0 get-size("step-4");
+  padding: 0 var(--space-m);
   margin-left: auto;
   margin-right: auto;
   position: relative;

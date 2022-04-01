@@ -18,14 +18,14 @@ shared:
   websites:
     - url: "https://www.smashingmagazine.com/2022/01/introduction-css-cascade-layers/#combining-cascade-layers-and-preprocessor-includes"
       text: "Getting Started with CSS Cascade Layers"
-    - url: "https://www.bram.us/2022/01/20/detect-at-rule-support-with-the-at-rule-function/"
-      text: "The Future of CSS: Detect at-rule support with @supports at-rule(@keyword)"
     - url: " https://polypane.app/css-specificity-calculator/"
       text: "Kilian'S CSS Specificity Calculator"
     - url: " https://specificity.keegan.st/"
       text: "The other CSS Specificity Calculator"
     - url: "https://www.bram.us/2021/09/15/the-future-of-css-cascade-layers-css-at-layer/"
       text: "The Future of CSS: Cascade Layers (CSS @layer)"
+    - url: "https://www.bram.us/2022/01/20/detect-at-rule-support-with-the-at-rule-function/"
+      text: "The Future of CSS: Detect at-rule support with @supports at-rule(@keyword)"
   codepen:
     - url: "https://codepen.io/gunnarbittersmann/pen/GRMVZma"
       text: ":where no man has gone before"

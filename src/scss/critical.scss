@@ -5,25 +5,6 @@
 @import "reset";
 @import "typography";
 
-@each $key, $value in $gorko-size-scale {
-  #{".stack-" + $key + " > *"} {
-    --stack-space: #{$value};
-  }
-
-  #{".stack-" + $key + " > * + *"} {
-    margin-top: var(--stack-space, 1em);
-  }
-}
-
-/* -------------------------------- */
-/* Utility Classes for Self-Spacing */
-
-@each $key, $value in $gorko-size-scale {
-  #{".my-stack-space-" + $key} {
-    --stack-space: #{$value};
-  }
-}
-
 body {
   @include apply-utility("font", "base");
   @include apply-utility("color", "gray-50");
@@ -44,10 +25,6 @@ h4 {
   @include apply-utility("leading", "flat");
 }
 
-// ul {
-//   padding: 0;
-// }
-
 p {
   @include apply-utility("color", "gray-50");
   @include apply-utility("leading", "loose");
@@ -60,14 +37,13 @@ p:not([class]) {
 a {
   cursor: pointer;
   text-decoration: none;
-  font-weight: 600;
   color: get-color("gray-50");
 
   &:focus {
     outline: 2px dashed currentColor;
   }
   &:hover {
-    color: get-color("secondary");
+    color: get-color("secondary-10");
   }
 }
 
@@ -92,10 +68,13 @@ main {
 @import "blocks/baristas";
 @import "blocks/button";
 @import "blocks/event-card";
+@import "blocks/event-list";
+@import "blocks/event-teaser";
 @import "blocks/form";
-@import "blocks/nav";
-@import "blocks/previous-events";
+@import "blocks/masthead";
+@import "blocks/person-image";
 @import "blocks/plain-html";
+@import "blocks/ribbon";
 @import "blocks/seperator";
 @import "blocks/single-event";
 @import "blocks/site-foot";

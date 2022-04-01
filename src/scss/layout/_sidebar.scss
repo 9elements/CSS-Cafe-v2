@@ -19,6 +19,7 @@
   align-items: var(--sidebar-alignment, flex-start);
   gap: var(--sidebar-gap-vertical, var(--sidebar-gap, 1rem))
     var(--sidebar-gap, 1rem);
+  justify-content: var(--sidebar-justification, flex-start);
 
   > * {
     flex-grow: 1;

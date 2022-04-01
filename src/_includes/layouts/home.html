@@ -1,9 +1,9 @@
 {% extends "layouts/base.html" %} {% block content %}
 
-<div class="wrapper stack-2xl">
+<div class="wrapper stack-3xl" style="margin-top: var(--space-2xl)" >
   <section class="previous-events stack-l" id="previous-events">
-    <h2 class="text-step-8 font-head uppercase">{{previous.headline}}</h2>
-    <div class="event-list stack-l">
+    <h2 class="text-step-8 font-head uppercase center">{{previous.headline}}</h2>
+    <div class="event-list">
       <div class="event-list__years stack-l tabbed">
         <ul class="cluster">
           {% for year in site.years.reverse() %}
@@ -12,12 +12,12 @@
           {% endfor %}
         </ul>
         {% for year in site.years %}
-        <section id="events{{year}}" class="stack-l">
+        <section id="events{{year}}" class="stack-m">
           {% for event in collections.events %}
-          {% set eventYear = event.data.date | dateYearFilter %}
-          {% if year == eventYear %}
-            {% include "partials/previous-event.html" %}
-          {% endif %}
+            {% set eventYear = event.data.date | dateYearFilter %}
+            {% if year == eventYear %}
+              {% include "partials/previous-event.html" %}
+            {% endif %}
           {% endfor %}  
         </section>
         {% endfor %}
@@ -25,12 +25,12 @@
     </div>
   </section>
 
-  <section class="stack-2xl">
+  <section class="stack-l">
     <h2 class="text-step-8 font-head uppercase center">{{baristas.headline}}</h2>
     <div class="baristas grid-switcher">
       {% for member in baristas.member %}
-      <div class="barista stack-l">
-        <div class="barista__image">
+      <div class="barista sidebar-left stack-s ">
+        <div class="person-image">
           <picture>
             <source
               srcset="images/{{member.img}}.webp"
@@ -43,8 +43,8 @@
           </picture>
         </div>
         <div class="barista__bodytext">
-          <h3>{{member.name}}</h3>
-          <p style="display: flex; align-items: center; gap: .25rem; flex-wrap: no-wrap;"><span><svg class="barista__icon" aria-hidden="true" focusable="false">
+          <h3 class="text-step-1 weight-bold">{{member.name}}</h3>
+          <p class="text-step-0 barista__social"><span><svg class="barista__icon" aria-hidden="true" focusable="false">
             <use xlink:href="/icons/icons.svg#twitter" />
             </svg></span><a href="https://twitter.com/{{member.twitter}}" target= "_blank" class="inline-link">@{{member.twitter}}</a>
           </p>

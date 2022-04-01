@@ -22,10 +22,10 @@
       padding: 0.5rem 1rem;
       resize: vertical;
       border: none;
-      border-bottom: 1px solid get-color("secondary");
+      border-bottom: 1px solid get-color("secondary-10");
 
       &:focus {
-        outline: 2px dashed get-color("secondary");
+        outline: 2px dashed get-color("secondary-10");
         outline-offset: -5px;
       }
     }

@@ -1,31 +1,39 @@
 <header role="banner" class="site-head">
   <div class="wrapper">
-    <div class="centerflex site-head__inner">
-      <div class="ribbon">
-        <div class="ribbon__color">
-          <a href="/" aria-label="{{ site.name }} - home" class="site-head__brand"> {% include "partials/logo-footer.svg" %}</a>
+   <nav aria-label="Main" class="nav | centerflex">
+      {% if page.url == "/" %}
+        <span class="nav__home-link">
+      {% else %}
+        <a href="/" aria-label="{{ site.name }} - Home" class="nav__home-link"> 
+      {% endif %}
+        <div class="ribbon">
+          <div class="ribbon__color">
+            {% include "partials/logo.svg" %}
+          </div>
         </div>
-      </div>
-      <div class="nav-wrapper stack-m">
-        <nav class="nav site-head__nav" aria-label="Primary">
-          <ul class="nav__list">
-            {% for item in navigation.items %}
-              <li>
-                <a
-                  href="{{ item.url }}"
-                  class="uppercase weight-regular"
-                  {{ helpers.getLinkActiveState(item.url,page.url) | safe }}
-                  >{{ item.text }}</a
-                >
-              </li>
-            {% endfor %}
+      {% if page.url == "/" %}
+        </span>
+      {% else %}
+        </a>
+      {% endif %}
+      <div style="position: relative;">
+        <ul class="nav__items">
+          {% for item in navigation.items %}
+            <li class="nav__item uppercase">
+              <a
+                href="{{ item.url }}"
+                class="nav__link  weight-semi-bold text-step-1"
+                {{ helpers.getLinkActiveState(item.url,page.url) | safe }}
+                >{{ item.text }}</a
+              >
+            </li>
+          {% endfor %}
           </ul>
-        </nav>
-        {% if title !== "Home" %}
-          <a href="/" class="go-back uppercase text-step-0 weight-bold">< go back </a>
-        {% endif %}
-      </div>
-    </div>
+          {% if page.url !== "/"  %}
+            <a href="/" class="go-back uppercase text-step-0 weight-bold">< go back </a>
+          {% endif %}
+        </div>
+    </nav>
   </div>
 </header>
 

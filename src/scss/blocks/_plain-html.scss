@@ -1,14 +1,15 @@
 .plain-html {
   > * + * {
-    margin-top: 0.75em;
+    margin-top: var(--space-xs);
   }
 
   h2 {
-    margin-top: 1.5em;
+    margin-top: var(--space-m);
   }
 
   p {
-    font-size: get-size("step-1");
+    font-size: get-size("step-2");
+    @include apply-utility("weight", "bold");
     line-height: 1.5;
   }
 }

@@ -1,9 +1,9 @@
-<section style="" class=" table-header stack-2xl">
-  <div class="wrapper stack-2xl">
+<section class="table-header stack-2xl">
+  <div class="wrapper stack-3xl">
     <h1 class="font-head uppercase color-gray-100 text-step-6">{{hero.body}}</h1>
     <div class="up-next">
-      <div class="speaker sidebar-left" style="--sidebar-gap: 2rem">
-        {% if upNext.speaker2 %}
+      <div class="speaker sidebar-left" style="--sidebar-gap: var(--space-m);">
+          {% if upNext.speaker2 %}
           <div class="speaker__image">
             <img
               style="width: 50%"
@@ -16,19 +16,19 @@
               alt="Image of {{upNext.speaker2}}"
             />
           </div>
-        {% else %}
+          {% else %}
           <div class="speaker__image">
             <img
               src="{{upNext.speakerImage}}"
               alt="Image of {{upNext.speaker}}"
             />
           </div>
-        {% endif %}
-        <div class="speaker__info stack-s">
-          <h2 class="text-step-2 weight-semi-bold ">Up next:</h2>
-          <h3 class="font-headline uppercase text-step-3 color-gray-100">{{upNext.topic}}</h3>
+          {% endif %}
+        <div class="speaker__info stack-2xs">
+          <h2 class="text-step-2 weight-bold ">Up next:</h2>
+          <h3 class="font-head uppercase text-step-3 color-gray-100">{{upNext.topic}}</h3>
           <p class="weight-semi-bold text-step-0"><span>{{upNext.date}} {{upNext.time}}</span> <br>by {{upNext.speaker}} {% if upNext.speaker2 %} & {{upNext.speaker2}} {% endif %}</p>
-          <a href="{{upNext.meetupUrl}}" class="inline-link color-secondary">Register now</a>
+          <a href="{{upNext.meetupUrl}}" class="text-step-0 inline-link">Register now</a>
         </div>
       </div>
     </div>

@@ -3,7 +3,7 @@
   pointer-events: auto;
   cursor: pointer;
   border-radius: 4px;
-  padding: get-size("step-1") get-size("step-2");
+  padding: var(--space-xs) var(--space-s);
   font-size: 1em;
   color: get-color("white");
   background: get-color("primary");
@@ -21,13 +21,13 @@
   }
 
   &--secondary {
-    background: get-color("secondary");
+    background: get-color("secondary-10");
     color: get-color("secondary-800");
-    border-color: get-color("secondary");
+    border-color: get-color("secondary-10");
 
     &:hover {
       background: get-color("secondary-800");
-      color: get-color("secondary");
+      color: get-color("secondary-10");
     }
 
     &:focus {
@@ -40,7 +40,7 @@
   display: inline-block;
   pointer-events: auto;
   cursor: pointer;
-  color: get-color("secondary");
+  color: get-color("secondary-10");
   @include apply-utility("weight", "semi-bold");
   text-decoration: underline;
 

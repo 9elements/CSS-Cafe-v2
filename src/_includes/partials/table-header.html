@@ -1,20 +1,20 @@
 <section class="table-header">
   <div class="wrapper stack-2xl">
-    <div>
+    <div class="stack-2xs">
       <h2 class="font-head text-step-6 uppercase">{{title}}</h2>
-      <p class="text-step-2">by {{speaker}} {% if speaker2 %} & {{speaker2}} {% endif %}</p>
+      <p class="text-step-2 author">by {{speaker}} {% if speaker2 %} & {{speaker2}} {% endif %}</p>
     </div>
 
     {% if videoId %}
-      <div class="video-shadow">
-        {% include 'partials/youtube.html' %}
-      </div>
+    <div class="video-shadow">
+      {% include 'partials/youtube.html' %}
+    </div>
     {% else %}
-      <section class="talk-details" style="margin-bottom: var(--space-2xl);">
-        <div class="plain-html stack-s">
-          {{ content | safe }}
-        </div>
-      </section>
+    <section class="talk-details" style="margin-bottom: var(--space-2xl);">
+      <div class="plain-html stack-m">
+        {{ content | safe }}
+      </div>
+    </section>
     {% endif %}
   </div>
   <div class="table"></div>

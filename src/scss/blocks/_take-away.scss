@@ -1,5 +1,5 @@
 .take-away {
-  // min-height: 10rem;
+  min-height: 15rem;
   position: relative;
   // z-index: 999;
   // background-color: #302b29;
@@ -9,8 +9,13 @@
   // background-position: 100% 100%;
   //   background-position: 65rem center;
 
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+
   .decoration {
-    padding-right: 3.5rem;
+    padding-right: var(--space-xl);
     position: absolute;
     top: -8rem;
     right: -12rem;
@@ -37,17 +42,5 @@
   }
 }
 .shared-links {
-  ul {
-    list-style-type: none;
-    padding: 0;
-
-    a {
-      color: get-color("secondary");
-      text-decoration: underline;
-
-      &:hover {
-        color: get-color("primary");
-      }
-    }
-  }
+  max-width: 40rem;
 }
