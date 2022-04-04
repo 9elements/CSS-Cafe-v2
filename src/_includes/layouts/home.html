@@ -1,6 +1,6 @@
 {% extends "layouts/base.html" %} {% block content %}
 
-<div class="wrapper stack-3xl" style="margin-top: var(--space-2xl)" >
+<div class="wrapper stack-3xl" style="margin-top: var(--space-xl-2xl)" >
   <section class="previous-events stack-l" id="previous-events">
     <h2 class="text-step-8 font-head uppercase center">{{previous.headline}}</h2>
     <div class="event-list">
@@ -18,7 +18,7 @@
             {% if year == eventYear %}
               {% include "partials/previous-event.html" %}
             {% endif %}
-          {% endfor %}  
+          {% endfor %}
         </section>
         {% endfor %}
       </div>

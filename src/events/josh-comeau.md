@@ -3,7 +3,7 @@ title: "Secret Mechanisms of CSS"
 date: "2022-03-24"
 time: "5PM CEST"
 speaker: "Josh Comeau"
-speakerImage: "adam-argyle"
+speakerImage: "josh-comeau"
 videoId: "Xt1Cw4qM3Ec"
 videoTitle: "Secret Mechanisms of CSS"
 speakerBio: |-

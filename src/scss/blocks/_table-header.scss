@@ -3,7 +3,6 @@
 
   h1 {
     text-align: center;
-    // 1 Rem größer als im Figma. Sonst geht die Überschrift über 4 Zeilen
     max-width: 52.625rem;
     margin-left: auto;
     margin-right: auto;
@@ -13,16 +12,21 @@
     font-style: italic;
   }
 
-  .up-next {
-    min-height: 35em;
-    margin-bottom: 15rem;
+  &__body {
+    //background: #f097;
+    margin-bottom: 64vw;
 
     @include media-query("md") {
-      margin-bottom: 0;
+      margin-bottom: 24rem;
     }
     @include media-query("lg") {
-      min-height: 25em;
+      min-height: 14rem;
       margin-bottom: 0;
+      margin-right: 21rem;
+    }
+
+    @include media-query("xl") {
+      margin-right: 20rem;
     }
   }
 }
@@ -33,6 +37,14 @@
     right: 10vw;
     bottom: 1.5rem;
     width: min(120vw, 38.1875rem);
+
+    @include media-query("lg") {
+      right: calc(clamp(1rem, calc(-13.77rem + 23.08vw), 7rem) - 4rem);
+    }
+
+    @include media-query("xl") {
+      right: 10vw;
+    }
   }
 
   width: 100%;

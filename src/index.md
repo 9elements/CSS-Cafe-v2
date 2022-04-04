@@ -5,9 +5,7 @@ hero:
   body: "We are an online-only event with talks on topics centered around CSS."
 upNext:
   speaker: "TBA"
-  speakerImage: /images/platzhalter.jpg
-  # speaker2: "Steph Eckles"
-  # speaker2Image: https://picsum.photos/id/237/400/600
+  speakerImage: /images/speaker/josh-comeau.jpg
   topic: "Beyond responsive design: New and future media queries"
   date: "31.08."
   time: "5PM CEST"

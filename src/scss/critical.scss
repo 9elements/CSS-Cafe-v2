@@ -63,7 +63,7 @@ main {
   );
   background-size: 100% 5rem;
   background-repeat: no-repeat;
-  padding-top: 5.5rem;
+  padding-top: var(--space-xl-2xl);
 }
 
 // *:focus {

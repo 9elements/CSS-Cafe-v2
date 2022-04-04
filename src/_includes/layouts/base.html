@@ -20,12 +20,6 @@
       </style>
     {% endif %}
 
-    {# Add facility for pages to declare an array of stylesheet paths #}
-    {% if pageStylesheets %}
-      {% for item in pageStylesheets %}
-        <link rel="stylesheet" media="print" href="{{ item }}?{{ assetHash }}" onload="this.media='all'" />
-      {% endfor %}
-    {% endif %}
   </head>
 
   <body>
@@ -36,5 +30,6 @@
     </main>
 
     {% include "partials/site-foot.html" %}
+
   </body>
 </html>
