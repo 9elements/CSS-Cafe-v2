@@ -6,15 +6,15 @@
     <div class="event-list">
       <div class="event-list__years stack-l tabbed">
         <ul class="cluster">
-          {% for year in site.years.reverse() %}
+          {% for year in site.years | reverse %}
           <li> <a href="#events{{year}}" class="">{{year}}</a>
           </li>
           {% endfor %}
         </ul>
-        {% for year in site.years %}
+        {% for year in site.years | reverse %}
         <section id="events{{year}}" class="stack-m">
           {% for event in collections.events %}
-            {% set eventYear = event.data.date | dateYearFilter %}
+            {% set eventYear = event.data.date | dateYearFilter  %}
             {% if year == eventYear %}
               {% include "partials/previous-event.html" %}
             {% endif %}

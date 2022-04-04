@@ -7,9 +7,9 @@ speakerImage: "adam-argyle"
 videoId: "Xt1Cw4qM3Ec"
 videoTitle: "Secret Mechanisms of CSS"
 speakerBio: |-
-  • Started building for the web in ~2008, have worked at organizations like Khan Academy, DigitalOcean, Gatsby Inc., Unsplash
-  • Runs a blog, joshwcomeau.com, which teaches a bunch of CSS/JS/React stuff in an interactive format
-  • Left my job last year to start my own business, creating online courses for frontend software developers.
+  * Started building for the web in ~2008, have worked at organizations like Khan Academy, DigitalOcean, Gatsby Inc., Unsplash
+  * Runs a blog, joshwcomeau.com, which teaches a bunch of CSS/JS/React stuff in an interactive format
+  * Left my job last year to start my own business, creating online courses for frontend software developers.
 twitter:
   url: "https://twitter.com/@JoshWComeau"
   text: "@JoshWComeau"

@@ -8,6 +8,7 @@ videoId: "iHD642POoR8"
 videoTitle: "History of Container Queries"
 speakerBio: |-
   Mike is a CSS aficionado, co-creator of the unofficial official gif for CSS. He enjoys making rad web stuff with rad people and been contracting, consulting or freelancing for the last 10, but still has no idea which one it is.
+
   Need more.... Mike lives in Sydney Australia but loves Germany. Before Covid he once went to Berlin 4 times in one year. Customs thinks he might be a drug runner.
 twitter:
   url: "https://twitter.com/MikeRiethmuller"
