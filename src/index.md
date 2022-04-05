@@ -5,7 +5,7 @@ hero:
   body: "We are an online-only event with talks on topics centered around CSS."
 upNext:
   speaker: "TBA"
-  speakerImage: /images/speaker/josh-comeau.jpg
+  speakerImage: josh-comeau
   topic: "Beyond responsive design: New and future media queries"
   date: "31.08."
   time: "5PM CEST"

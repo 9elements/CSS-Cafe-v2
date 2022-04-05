@@ -12,13 +12,10 @@
     // justify-content: center;
 
     --sidebar-gap: var(--space-m);
-    --sidebar-width: 12rem;
-    --sidebar-threshold: 15rem;
+    --sidebar-width: min(25vw, 12rem);
+    --sidebar-gap: var(--space-s-m);
+    --sidebar-threshold: 12rem;
     --sidebar-justification: center;
-
-    &__bodytext {
-      flex-basis: 15rem;
-    }
 
     &__social {
       display: flex;

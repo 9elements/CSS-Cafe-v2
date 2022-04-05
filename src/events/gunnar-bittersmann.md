@@ -3,7 +3,7 @@ title: "CSSBattle at CSS Café"
 date: "2021-12-16"
 time: "5PM CEST"
 speaker: "Gunnar Bittersmann"
-speakerImage: "adam-argyle"
+speakerImage: "gunnar-bittersmann"
 speakerBio: |-
   Gunnar is a web design engineer and edutainer.
   He values people (UX) over technology.

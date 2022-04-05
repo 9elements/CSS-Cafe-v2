@@ -2,9 +2,19 @@
   <div class="wrapper stack-2xl-3xl">
     <h1 class="font-head uppercase color-gray-100 text-step-6">{{hero.body}}</h1>
     <div class="table-header__body">
+      {% if upNext %}
       <div class="up-next sidebar-left">
         <div class="up-next__image">
-          <img src="{{upNext.speakerImage}}" alt="Image of {{upNext.speaker}}" />
+          <picture>
+            <source
+            srcset="images/speaker/{{upNext.speakerImage}}.webp"
+            type="image/webp"
+            />
+            <img
+            src="images/speaker/{{upNext.speakerImage}}.jpg"
+            alt="Portrait of {{upNext.speaker}}"
+            />
+          </picture>
         </div>
         <div class="up-next__info stack-2xs">
           <h2 class="text-step-2 weight-bold ">Up next:</h2>
@@ -15,6 +25,9 @@
           <a href="{{upNext.meetupUrl}}" class="text-step-0 inline-link">Register now</a>
         </div>
       </div>
+      {% else %}
+      <h3 class="uppercase color-gray-100 text-step-3">>>Currently, no further CSS Cafe is planned. We will keep you updated on Twitter<<</h3>
+      {% endif %}
     </div>
   </div>
 

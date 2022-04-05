@@ -3,7 +3,7 @@ title: "How to create pure CSS Games"
 date: "2021-11-25"
 time: "5PM CEST"
 speaker: "Elad Shechter"
-speakerImage: "adam-argyle"
+speakerImage: "elad-shechter"
 videoId: "QVdWMbmXHjo"
 videoTitle: "How to Create Pure CSS Games"
 speakerBio: |-
