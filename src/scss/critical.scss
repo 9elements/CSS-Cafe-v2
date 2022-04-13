@@ -48,6 +48,7 @@ a {
 
   &:focus {
     outline: 2px dashed currentColor;
+    outline-offset: 3px;
   }
   &:hover {
     color: get-color("secondary-10");

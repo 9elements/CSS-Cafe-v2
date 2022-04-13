@@ -1,28 +1,26 @@
 .form {
-  max-width: 35rem;
-  margin-left: auto;
-  margin-right: auto;
-  background: get-color("white");
-  padding: 1.5625rem;
-  border-radius: 4px;
-  .form-intro {
-    text-align: center;
-  }
+  --switcher-gap: var(--space-xl);
+  --switcher-threshold: 40rem;
 
   form {
+    display: flex;
+    flex-direction: column;
+    max-width: 35rem;
+    width: 100%;
     label {
       cursor: pointer;
-      color: get-color("dark");
+      color: get-color("gray-200");
+      font-style: italic;
     }
 
     input:not([type="submit"]),
     textarea {
-      background: get-color("secondary-100");
+      background: get-color("gray-800");
       width: 100%;
       padding: 0.5rem 1rem;
       resize: vertical;
       border: none;
-      border-bottom: 1px solid get-color("secondary-10");
+      color: white;
 
       &:focus {
         outline: 2px dashed get-color("secondary-10");
@@ -30,7 +28,7 @@
       }
     }
     input[type="submit"] {
-      width: 100%;
+      align-self: flex-end;
     }
   }
 }

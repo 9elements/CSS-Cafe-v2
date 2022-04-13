@@ -17,16 +17,20 @@
           </picture>
         </div>
         <div class="up-next__info stack-2xs">
-          <h2 class="text-step-2 weight-bold ">Up next:</h2>
+          <h2 class="text-step-0 color-gray-200">Up next:</h2>
           <h3 class="font-head uppercase text-step-3 color-gray-100">{{upNext.topic}}</h3>
           <p class="weight-semi-bold text-step-0">
             <span class="weight-bold">{{upNext.date}} {{upNext.time}}</span><br>by {{upNext.speaker}}
           </p>
-          <a href="{{upNext.meetupUrl}}" class="text-step-0 inline-link">Register now</a>
+          <a href="{{upNext.meetupUrl}}" class="text-step-0 inline-link">Register now <span class="sr-only">for {{upNext.topic }}</span></a>
         </div>
       </div>
       {% else %}
-      <h3 class="uppercase color-gray-100 text-step-3">>>Currently, no further CSS Cafe is planned. We will keep you updated on Twitter<<</h3>
+      <div class="placeholder stack-2xs" style="max-width: 35rem;">
+          <h2 class="text-step-0 color-gray-200">Up next:</h2>
+          <p class="color-gray-100 text-step-2 weight-bold">The details for our next Meetup have not yet been finalized. To make sure you don't miss an event, follow us on <a href="https://twitter.com/css__cafe" class="color-secondary-10">Twitter</a>  or join us on <a href="https://www.meetup.com/de-DE/CSS-Cafe/" class="color-secondary-10">Meetup</a>.</p>
+      </div>
+
       {% endif %}
     </div>
   </div>

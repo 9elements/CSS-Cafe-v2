@@ -1,13 +1,12 @@
 <article class="event-teaser sidebar-left bg-white">
-  <p class="event-teaser__date color-dark bg-gray-10 uppercase text-step-2 weight-bold">
-    {{event.data.date | dateFilter}}
-  </p>
+  <time datetime="{{event.data.date | dateFilter}}" class="event-teaser__date color-dark bg-gray-10 uppercase text-step-2 weight-bold">{{event.data.date | dateFilter}}</time>
   <div class="sidebar-right event-teaser__body">
     <div class="event-teaser__info">
-      <a href="{{ event.url }}" class="event-teaser__link"></a>
-      <p class="color-gray-800 text-step-2 md:text-step-3"><span class="color-gray-600 text-step-0">{{event.data.speaker}} {% if event.data.speaker2 %} & {{event.data.speaker2}} {% endif %}<span class="sr-only">:</span></span>{{event.data.title}}
-      </p>
+      <a class=" event-teaser__link color-gray-800 text-step-2 md:text-step-3" href="{{ event.url }}"><span class="color-gray-600 text-step-0" style="display: block;">{{event.data.speaker}} {% if event.data.speaker2 %} & {{event.data.speaker2}} {% endif %}<span class="sr-only">:</span></span>{{event.data.title}}
+      </a>
     </div>
     <div class="button button--secondary" aria-hidden="true">View Event</div>
   </div>
 </article>
+
+{# Teaser umformatierung. A Tag statt p und a:after über alles drüber legen. #}

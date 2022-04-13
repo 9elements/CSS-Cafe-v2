@@ -23,7 +23,7 @@
     overflow-x: hidden;
     display: none;
 
-    @include media-query("md") {
+    @include media-query("lg") {
       display: block;
     }
   }
@@ -36,7 +36,7 @@
     overflow-x: hidden;
     display: none;
 
-    @include media-query("md") {
+    @include media-query("lg") {
       display: block;
     }
   }

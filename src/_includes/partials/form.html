@@ -1,36 +1,28 @@
-<div class="form stack-l">
-  <div class="form-intro">
-    <p class="text-step-2 md:text-step-3 color-dark weight-bold">
-      You wanna talk about anything related to CSS? Let us know!
-    </p>
+<div class="form switcher">
+  <div class="form__text">
+    <p class="weight-bold text-step-2">We are always accepting talk suggestions! All experience levels are welcome. If you are feeling shaky, we would be happy to do a test run with you to make sure you feel confident and comfortable.</p>
   </div>
   <form name="contact" class="stack-l">
-    <div class="form-group">
-      <label for="name" class="text-step-1">Your name</label>
+    <div class="form-group stack-2xs">
+      <label for="name" class="text-step-0">How may we call you?</label>
       <br />
       <input type="text" name="name" id="name" required />
       <br />
     </div>
-    <div class="form-group">
-      <label for="email" class="text-step-1 ">Your e-mail</label>
+    <div class="form-group stack-2xs">
+      <label for="contact" class="text-step-0" >How can we reach you? (E-mail or Twitter)</label>
       <br />
-      <input type="email" name="email" id="email" required />
-      <br />
-    </div>
-    <div class="form-group">
-      <label for="topic" class="text-step-1 ">Your topic</label>
-      <br />
-      <input type="text" name="topic" id="topic" required />
+      <input type="text" name="contact" id="contact" required />
       <br />
     </div>
-    <div class="form-group">
-      <label for="message" class="text-step-1 "
-        >Your message to us</label
+    <div class="form-group stack-2xs">
+      <label for="message" class="text-step-0"
+        >What do you want to talk about?</label
       >
       <br />
       <textarea name="message" id="message" rows="5"></textarea>
       <br />
     </div>
-    <input type="submit" value="Submit" class="button" />
+    <input type="submit" value="Submit" class="button button--secondary" />
   </form>
 </div>

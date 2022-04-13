@@ -19,7 +19,7 @@ submit:
 baristas:
   headline: "Meet your Baristas"
   member:
-    - name: "Christian Schaefer"
+    - name: "Christian Schäfer"
       twitter: "derSchepp"
       img: "christian-schaefer"
     - name: "Nils Binder"
