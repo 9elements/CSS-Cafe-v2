@@ -21,6 +21,7 @@
             <img
             src="/images/speaker/{{speakerImage}}.jpg"
             alt="Portrait of {{speaker}}"
+            loading="lazy"
             />
           </picture>
         </div>
@@ -57,6 +58,7 @@
             <img
               src="/images/speaker/{{speaker2Image}}.jpg"
               alt="Portrait of {{speaker2}}"
+              loading="lazy"
             />
           </picture>
         </div>
@@ -66,8 +68,8 @@
     <hr class="seperator">
     {% if shared %}
     <section class="take-away">
-      <img src="/images/Coffee-Cup.webp" alt="" class="decoration">
-      <img src="/images/take-away.svg" alt="" class="lettering">
+      <img src="/images/Coffee-Cup.webp" alt="" class="decoration" loading="lazy">
+      <img src="/images/take-away.svg" alt="" class="lettering" loading="lazy">
       {% include "partials/take-away.html" %}
     </section>
     <hr class="seperator">
