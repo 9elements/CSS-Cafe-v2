@@ -29,6 +29,9 @@
     }
     input[type="submit"] {
       align-self: flex-end;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
     }
   }
 }
