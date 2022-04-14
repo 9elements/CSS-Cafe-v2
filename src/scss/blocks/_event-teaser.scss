@@ -4,17 +4,18 @@
   --sidebar-alignment: center;
   border-radius: 4px;
   position: relative;
+  overflow: hidden;
 
   > * {
     padding: 1ch;
   }
 
   &__date {
+    overflow: hidden;
     align-self: stretch;
     display: flex;
     align-items: center;
     font-style: italic;
-    border-radius: 4px 0 0 4px;
     line-height: 1.08;
   }
 

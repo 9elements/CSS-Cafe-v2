@@ -36,7 +36,8 @@
     position: absolute;
     right: 10vw;
     bottom: 1.5rem;
-    width: min(120vw, 38.1875rem);
+    width: min(100vw, 38.1875rem);
+    height: auto;
 
     @include media-query("lg") {
       right: calc(clamp(1rem, calc(-13.77rem + 23.08vw), 7rem) - 4rem);

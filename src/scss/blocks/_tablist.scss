@@ -20,9 +20,9 @@
   padding: var(--space-xs) var(--space-s);
   font-size: 1em;
   color: get-color("white");
-  background: get-color("primary");
+  background: get-color("primary-600");
   @include apply-utility("weight", "semi-bold");
-  border: 1px solid get-color("primary");
+  border: 1px solid get-color("primary-600");
 
   &:focus {
     outline-offset: -5px;
