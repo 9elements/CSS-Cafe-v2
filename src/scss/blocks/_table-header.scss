@@ -17,7 +17,7 @@
     margin-bottom: 64vw;
 
     @include media-query("md") {
-      margin-bottom: 24rem;
+      margin-bottom: 5rem;
     }
     @include media-query("lg") {
       min-height: 14rem;
@@ -38,6 +38,11 @@
     bottom: 1.5rem;
     width: min(100vw, 38.1875rem);
     height: auto;
+
+    @include media-query("md") {
+      right: clamp(-8rem, -25.791rem + 41.86vw, 1rem);
+      width: clamp(31rem, 23.093rem + 18.6vw, 35rem);
+    }
 
     @include media-query("lg") {
       right: calc(clamp(1rem, calc(-13.77rem + 23.08vw), 7rem) - 4rem);

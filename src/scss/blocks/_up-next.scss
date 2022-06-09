@@ -4,7 +4,7 @@
   --sidebar-gap: var(--space-s-m);
   margin-inline: auto;
 
-  @include media-query("lg") {
+  @include media-query("md") {
     margin-inline: unset;
   }
 
