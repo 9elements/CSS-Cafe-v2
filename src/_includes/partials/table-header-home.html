@@ -15,7 +15,7 @@
             alt="Portrait of {{upNext.speaker}}"
             loading="lazy"
              width= "580" height= "580"
-             
+
             />
           </picture>
         </div>
@@ -25,7 +25,9 @@
           <p class="weight-semi-bold text-step-0">
             <span class="weight-bold">{{upNext.date}} {{upNext.time}}</span><br>by {{upNext.speaker}}
           </p>
-          <a href="{{upNext.meetupUrl}}" class="text-step-0 inline-link">Register now <span class="sr-only">for {{upNext.topic }}</span></a>
+          {% if upNext.meetupUrl %}
+            <a href="{{upNext.meetupUrl}}" class="text-step-0 inline-link">Register now <span class="sr-only">for {{upNext.topic }}</span></a>
+          {% endif %}
         </div>
       </div>
       {% else %}

@@ -3,15 +3,15 @@ title: "Home"
 layout: "layouts/home.html"
 hero:
   body: "We are an online-only event with talks on topics centered around CSS."
-# upNext:
-#   speaker: "TBA"
-#   speakerImage: josh-comeau
-#   topic: "Beyond responsive design: New and future media queries"
-#   date: "31.08."
-#   time: "5PM CEST"
-#   meetupUrl: "#"
-#   meetupText: "Attend via Meetup"
-#   description: "The idea of container queries has been floating around for at least a decade. Let's take a look at the evolution of this idea, the challenges, why it hasn't been implemented, its future, and algorithmic layouts we can achieve with CSS today."
+upNext:
+  speaker: "Ahmad Shadeed"
+  speakerImage: ahmad-shadeed
+  topic: "Defensive CSS"
+  date: "30.06."
+  time: "5PM CEST"
+  # meetupUrl: "#"
+  meetupText: "Attend via Meetup"
+  description: "In this talk, I will introduce you to the concept of Defensive CSS. It’s all about ways and techniques we can use right away to prevent potential layout issues."
 previous:
   headline: "Previous Events"
 submit:
