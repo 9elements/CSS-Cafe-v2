@@ -25,7 +25,7 @@
               <span class="weight-bold">{{upNext.date}} {{upNext.time}}</span><br>with {{upNext.speaker}}
             </p>
             {% if upNext.meetupUrl %}
-              <a href="{{upNext.meetupUrl}}" class="text-step-0 inline-link">Register now <span class="sr-only">for {{upNext.topic }}</span></a>
+              <a href="{{upNext.meetupUrl}}" class="text-step-0 inline-link">{{upNext.meetupText}} <span class="sr-only">in {{upNext.topic }}</span></a>
             {% endif %}
           </div>
         </div>
