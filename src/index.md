@@ -4,10 +4,10 @@ layout: "layouts/home.html"
 hero:
   body: "We are an online-only event with talks on topics centered around CSS."
 upNext:
-  speaker: "Ahmad Shadeed"
-  speakerImage: ahmad-shadeed
-  topic: "Defensive CSS"
-  date: "30.06."
+  speaker: "Kevin Powell"
+  speakerImage: kevin-powell
+  topic: "TBA"
+  date: "28.07."
   time: "5PM CEST"
   meetupUrl: "https://www.meetup.com/de-DE/css-cafe/events/286461082/"
   meetupText: "Attend via Meetup"
