@@ -9,7 +9,7 @@ upNext:
   topic: "TBA"
   date: "28.07."
   time: "5PM CEST"
-  meetupUrl: "https://www.meetup.com/de-DE/css-cafe/events/286461082/"
+  meetupUrl: ""
   meetupText: "Attend via Meetup"
   description: "In this talk, I will introduce you to the concept of Defensive CSS. It’s all about ways and techniques we can use right away to prevent potential layout issues."
 previous:
