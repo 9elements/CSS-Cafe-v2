@@ -6,12 +6,11 @@ hero:
 upNext:
   speaker: "Kevin Powell"
   speakerImage: kevin-powell
-  topic: "TBA"
+  topic: "Flexbox vs. Grid"
   date: "28.07."
   time: "5PM CEST"
-  meetupUrl: ""
+  meetupUrl: "https://www.meetup.com/de-DE/css-cafe/events/287267837/"
   meetupText: "Attend via Meetup"
-  description: "In this talk, I will introduce you to the concept of Defensive CSS. It’s all about ways and techniques we can use right away to prevent potential layout issues."
 previous:
   headline: "Previous Events"
 submit:
