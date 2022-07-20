@@ -18,7 +18,6 @@
   {% set metaDesc = site.metaDesc %}
 {% endif %}
 
-{{metaDesc | log}}
 <title>{{ pageTitle }}</title>
 <link rel="canonical" href="{{ currentUrl }}" />
 
@@ -33,7 +32,6 @@
 {% else %}
   {% set socialImage = site.url + '/images/meta/social-share.png' %}
 {% endif %}
-{{ socialImage | log }}
 
 <meta name="twitter:card" content="summary_large_image" />
 <meta property="og:image" content="{{ socialImage }}" />
