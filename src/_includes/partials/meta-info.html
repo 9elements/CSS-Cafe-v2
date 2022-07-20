@@ -27,7 +27,10 @@
 <meta property="og:type" content="website" />
 <meta property="og:url" content="{{ currentUrl }}" />
 
-{% if not socialImage %}
+
+{% if site.socialImage %}
+   {% set socialImage = site.url + site.socialImage %}
+{% else %}
   {% set socialImage = site.url + '/images/meta/social-share.png' %}
 {% endif %}
 
