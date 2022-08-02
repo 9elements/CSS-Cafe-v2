@@ -6,14 +6,14 @@ eleventyComputed:
   metaDesc: "Next Meetup: {{upNext.date }} {{upNext.time }} | {{upNext.topic}} by {{upNext.speaker}}"
 hero:
   body: "We are an online-only event with talks on topics centered around CSS."
-upNext:
-  speaker: "Kevin Powell"
-  speakerImage: kevin-powell
-  topic: "Flexbox vs. Grid"
-  date: "28.07."
-  time: "5PM CEST"
-  meetupUrl: "https://www.meetup.com/de-DE/css-cafe/events/287267837/"
-  meetupText: "Attend via Meetup"
+# upNext:
+#   speaker: "Kevin Powell"
+#   speakerImage: kevin-powell
+#   topic: "Flexbox vs. Grid"
+#   date: "28.07."
+#   time: "5PM CEST"
+#   meetupUrl: "https://www.meetup.com/de-DE/css-cafe/events/287267837/"
+#   meetupText: "Attend via Meetup"
 previous:
   headline: "Previous Events"
 submit:
