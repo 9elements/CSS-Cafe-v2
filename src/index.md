@@ -2,8 +2,8 @@
 title: "Home"
 layout: "layouts/home.html"
 socialImage: "/images/meta/css-cafe-kevin-2.png"
-eleventyComputed:
-  metaDesc: "Next Meetup: {{upNext.date }} {{upNext.time }} | {{upNext.topic}} by {{upNext.speaker}}"
+# eleventyComputed:
+# metaDesc: "Next Meetup: {{upNext.date }} {{upNext.time }} | {{upNext.topic}} by {{upNext.speaker}}"
 hero:
   body: "We are an online-only event with talks on topics centered around CSS."
 # upNext:
