@@ -7,12 +7,12 @@ eleventyComputed:
 hero:
   body: "We are an online-only event with talks on topics centered around CSS."
 upNext:
-  speaker: "Leonie Watson"
-  speakerImage: "leonie-watson"
-  topic: "CSS-Speech"
-  date: "30.03."
+  speaker: "Rachel Andrew"
+  speakerImage: "rachel-andrew"
+  topic: "When New CSS Features Collide: Possibility and Complexity at the Intersections"
+  date: "27.04."
   time: "5PM CEST"
-  meetupUrl: "https://www.meetup.com/de-DE/css-cafe/events/291837233/"
+  meetupUrl: "https://www.meetup.com/de-DE/css-cafe/events/292722256/"
   meetupText: "Attend via Meetup"
 previous:
   headline: "Previous Events"
