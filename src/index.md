@@ -3,16 +3,16 @@ title: "Home"
 layout: "layouts/home.html"
 socialImage: "/images/meta/css-cafe-matthias.png"
 eleventyComputed:
- metaDesc: "Next Meetup: {{upNext.date }} {{upNext.time }} | {{upNext.topic}} by {{upNext.speaker}}"
+  metaDesc: "Next Meetup: {{upNext.date }} {{upNext.time }} | {{upNext.topic}} by {{upNext.speaker}}"
 hero:
   body: "We are an online-only event with talks on topics centered around CSS."
 upNext:
-  speaker: "Rachel Andrew"
-  speakerImage: "rachel-andrew"
-  topic: "When New CSS Features Collide: Possibility and Complexity at the Intersections"
-  date: "27.04."
+  speaker: "Scott Kellum"
+  speakerImage: "scott-kellum"
+  topic: "Mapping Typography"
+  date: "22.06."
   time: "5PM CEST"
-  meetupUrl: "https://www.meetup.com/de-DE/css-cafe/events/292722256/"
+  meetupUrl: "https://www.meetup.com/de-DE/css-cafe/events/293341869/"
   meetupText: "Attend via Meetup"
 previous:
   headline: "Previous Events"
