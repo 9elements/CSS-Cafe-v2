@@ -50,4 +50,6 @@ shared:
       text: "@una"
 ---
 
+_Update 06/2023:_ Since the recording of this, the syntax for scroll-linked animations got updated. For up-to-date info, visit [scroll-driven-animations.style](https://scroll-driven-animations.style/).
+
 A new and upcoming addition to CSS are “Scroll-linked Animations” which allows you to link animations to the scroll offset of a scroll container using only CSS — no JavaScript needed! In this demo-heavy presentation we'll dig into the what this spec has to offer and what we can build with it.

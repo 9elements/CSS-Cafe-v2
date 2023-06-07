@@ -12,4 +12,10 @@
     @include apply-utility("weight", "bold");
     line-height: 1.5;
   }
+
+  & a {
+    text-decoration: underline;
+    text-underline-offset: 0.15em;
+    text-decoration-thickness: 0.1em;
+  }
 }
