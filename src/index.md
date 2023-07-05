@@ -7,12 +7,12 @@ eleventyComputed:
 hero:
   body: "We are an online-only event with talks on topics centered around CSS."
 upNext:
-  speaker: "Scott Kellum"
-  speakerImage: "scott-kellum"
-  topic: "Mapping Typography"
-  date: "22.06."
+  speaker: "Heydon Pickering"
+  speakerImage: "heydon-pickering"
+  topic: "Why Doesn’t CSS Have Scope?"
+  date: "20.07."
   time: "5PM CEST"
-  meetupUrl: "https://www.meetup.com/de-DE/css-cafe/events/293341869/"
+  meetupUrl: "https://www.meetup.com/css-cafe/events/294449374/"
   meetupText: "Attend via Meetup"
 previous:
   headline: "Previous Events"
