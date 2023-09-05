@@ -7,12 +7,12 @@ eleventyComputed:
 hero:
   body: "We are an online-only event with talks on topics centered around CSS."
 upNext:
-  speaker: "Heydon Pickering"
-  speakerImage: "heydon-pickering"
-  topic: "Why Doesn’t CSS Have Scope?"
-  date: "20.07."
+  speaker: "Kevin Powell"
+  speakerImage: "kevin-powell"
+  topic: "Stop Over-engineering your CSS"
+  date: "28.09."
   time: "5PM CEST"
-  meetupUrl: "https://www.meetup.com/css-cafe/events/294449374/"
+  meetupUrl: "https://www.meetup.com/css-cafe/events/295880075/"
   meetupText: "Attend via Meetup"
 previous:
   headline: "Previous Events"
