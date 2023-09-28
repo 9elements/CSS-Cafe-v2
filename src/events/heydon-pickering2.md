@@ -4,7 +4,7 @@ date: "2023-07-20"
 time: "5PM CEST"
 speaker: "Heydon Pickering"
 speakerImage: "heydon-pickering"
-videoId: "6S_kXfqH-u4"
+videoId: "7saU9uTwqI0"
 videoTitle: "Why doesnt CSS have scope?"
 speakerBio: |-
   Heydon Pickering has worked with The Paciello Group, The BBC, Smashing Magazine, and Bulb Energy as a designer, engineer, writer, editor, and illustrator. He was shortlisted for Designer Of The Year in The Net Awards. Heydon previously wrote Inclusive Design Patterns which sold over 10,000 copies. Proceeds from this title were donated to the ACLU and The Democratic Socialists Of America, to help these organizations fight fascism and create a more inclusive society.
