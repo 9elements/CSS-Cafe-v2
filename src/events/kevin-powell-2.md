@@ -4,7 +4,7 @@ date: "2023-09-29"
 time: "5PM CEST"
 speaker: "Kevin Powell"
 speakerImage: "kevin-powell"
-videoId: "ESAXStllfcw"
+videoId: "lhudSibgavQ"
 videoTitle: "Stop Over-engineering your CSS"
 speakerBio: |-
   [Kevin Powell](https://www.kevinpowell.co/) is a CSS Evangelist who is passionate about helping front-end developers learn and appreciate CSS. He creates content on various platforms, including [YouTube](https://www.youtube.com/kevinpowell) and [Twitch](https://www.twitch.tv/kevinpowellcss), where he shares tips, tricks, tutorials, and live streams related to front-end web development and design.
