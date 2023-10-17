@@ -1,6 +1,6 @@
 ---
 title: "Mapping Typography"
-date: "2023-04-27"
+date: "2023-06-22"
 time: "5PM CEST"
 speaker: "Scott Kellum"
 speakerImage: "scott-kellum"
