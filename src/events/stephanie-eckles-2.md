@@ -4,7 +4,7 @@ date: "2023-10-30"
 time: "5PM CET"
 speaker: "Stephanie Eckles"
 speakerImage: "stephanie-eckles"
-videoId: ""
+videoId: "z8AuhLf2uxQ"
 videoTitle: "Weird Things You Missed About CSS"
 speakerBio: |-
   Stephanie is the author of [ModernCSS.dev](https://moderncss.dev/) which provides modern solutions to old CSS problems as in-depth tutorials. She is also the creator of [Style Stage](https://stylestage.dev/), and author of [SmolCSS](https://smolcss.dev/) and [11ty.Rocks](https://11ty.rocks/). She enjoys sharing her experience as an author, egghead instructor, co-host of the Word Wrap podcast, Twitch streamer, podcast guest, and conference speaker. She is an advocate for accessibility, scalable CSS, and the Jamstack (especially Eleventy).
