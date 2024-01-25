@@ -11,7 +11,7 @@ upNext:
   speakerImage: "gareth-heyes"
   topic: "Blind CSS Exfiltration: Stealing user data from unknown web pages via CSS"
   date: "25.01.2024"
-  time: "5PM CET"
+  time: "4PM CET"
   meetupUrl: "https://www.meetup.com/de-DE/css-cafe/events/298480761/?isFirstPublish=true"
   meetupText: "Attend via Meetup"
 previous:
