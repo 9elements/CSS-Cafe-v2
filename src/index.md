@@ -1,7 +1,6 @@
 ---
 title: "Home"
 layout: "layouts/home.html"
-socialImage: "/images/meta/css-cafe-heydon.png"
 eleventyComputed:
   metaDesc: "Next Meetup: {{upNext.date }} {{upNext.time }} | {{upNext.topic}} by {{upNext.speaker}}"
 hero:
