@@ -7,12 +7,12 @@ eleventyComputed:
 hero:
   body: "We are an online-only event with talks on topics centered around CSS."
 upNext:
-  speaker: "Gareth Heyes"
-  speakerImage: "gareth-heyes"
-  topic: "Blind CSS Exfiltration: Stealing user data from unknown web pages via CSS"
-  date: "25.01.2024"
-  time: "4PM CET"
-  meetupUrl: "https://www.meetup.com/de-DE/css-cafe/events/298480761/?isFirstPublish=true"
+  speaker: "Trys Mudford"
+  speakerImage: "trys-mudford"
+  topic: "Fluid responsive design, the Utopian future"
+  date: "21.03.2024"
+  time: "5PM CET"
+  meetupUrl: "https://www.meetup.com/de-DE/css-cafe/events/299653271/"
   meetupText: "Attend via Meetup"
 previous:
   headline: "Previous Events"
