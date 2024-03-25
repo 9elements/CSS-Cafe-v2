@@ -5,7 +5,7 @@ eleventyComputed:
   metaDesc: "Next Meetup: {{upNext.date }} {{upNext.time }} | {{upNext.topic}} by {{upNext.speaker}}"
 hero:
   body: "We are an online-only event with talks on topics centered around CSS."
-upNext:
+xupNext:
   speaker: "Trys Mudford"
   speakerImage: "trys-mudford"
   topic: "Fluid responsive design, the Utopian future"

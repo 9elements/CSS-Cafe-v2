@@ -9,30 +9,32 @@
               <source
               srcset="images/speaker/{{upNext.speakerImage}}.webp"
               type="image/webp"
-              />
+/>
               <img
               src="images/speaker/{{upNext.speakerImage}}.jpg"
               alt="Portrait of {{upNext.speaker}}"
               loading="lazy"
               width= "580" height= "580"
-              />
+/>
             </picture>
           </div>
           <div class="up-next__info stack-2xs">
             <h2 class="text-step-0 color-gray-200">Up next:</h2>
             <h3 class="font-head uppercase text-step-3 color-gray-100">{{upNext.topic}}</h3>
             <p class="weight-semi-bold text-step-0">
-              <span class="weight-bold">{{upNext.date}} {{upNext.time}}</span><br>with {{upNext.speaker}}
+              <span class="weight-bold">{{upNext.date}}
+                {{upNext.time}}</span><br>with {{upNext.speaker}}
             </p>
             {% if upNext.meetupUrl %}
-              <a href="{{upNext.meetupUrl}}" class="text-step-0 inline-link">{{upNext.meetupText}} <span class="sr-only">in {{upNext.topic }}</span></a>
+              <a href="{{upNext.meetupUrl}}" class="text-step-0 inline-link">{{upNext.meetupText}}
+                <span class="sr-only">in {{upNext.topic }}</span></a>
             {% endif %}
           </div>
         </div>
       {% else %}
         <div class="placeholder stack-2xs" style="max-width: 35rem;">
-            <h2 class="text-step-0 color-gray-200">Up next:</h2>
-            <p class="color-gray-100 text-step-2 weight-bold">The details for our next Meetup have not yet been finalized. To make sure you don't miss an event, follow us on <a href="https://twitter.com/css__cafe" class="color-secondary-10">Twitter</a>  or join us on <a href="https://www.meetup.com/de-DE/CSS-Cafe/" class="color-secondary-10">Meetup</a>.</p>
+          <h2 class="text-step-0 color-gray-200">Up next:</h2>
+          <p class="color-gray-100 text-step-2 weight-bold">The details for our next Meetup have not yet been finalized. To make sure you don't miss an event, follow us on <a href="https://mastodon.social/@css__cafe" class="color-secondary-10">Mastodon</a>, <a href="https://twitter.com/css__cafe" class="color-secondary-10">Twitter</a> or join us on <a href="https://www.meetup.com/de-DE/CSS-Cafe/" class="color-secondary-10">Meetup</a>.</p>
         </div>
       {% endif %}
     </div>
@@ -45,7 +47,7 @@
       <source srcset="/images/coffee/375-mockup.webp 375w,/images/coffee/611-mockup.webp 611w,/images/coffee/1222-mockup.webp 1222w" type="image/webp"
         sizes="(min-width: 510px) 611px, 120vw">
       <img srcset="/images/coffee/375-mockup.png 375w,/images/coffee/611-mockup.png 611w,/images/coffee/1222-mockup.png 1222w"
-        src="/images/coffee/611-mockup.png" sizes="(min-width: 510px) 611px, 120vw" alt=""  loading="lazy" width= "375" height= "252" />
+        src="/images/coffee/611-mockup.png" sizes="(min-width: 510px) 611px, 120vw" alt=""  loading="lazy" width= "375" height= "252"/>
     </picture>
   </div>
 </section>
