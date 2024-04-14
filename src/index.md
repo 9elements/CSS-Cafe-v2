@@ -5,7 +5,7 @@ eleventyComputed:
   metaDesc: "Next Meetup: {{upNext.date }} {{upNext.time }} | {{upNext.topic}} by {{upNext.speaker}}"
 hero:
   body: "We are an online-only event with talks on topics centered around CSS."
-xupNext:
+upNext:
   speaker: "Bramus Van Damme"
   speakerImage: "bramus-van-damme"
   topic: "If View Transitions and Scroll-Driven Animations had a baby…"
