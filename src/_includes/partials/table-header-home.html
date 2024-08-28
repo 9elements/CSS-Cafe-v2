@@ -6,18 +6,7 @@
         {% set event = events.next %}
         <div class="up-next sidebar-left">
           <div class="up-next__image">
-            <picture>
-              <source
-              srcset="images/speaker/{{ event.speaker.name | slugify }}.webp"
-              type="image/webp"
-              />
-              <img
-              src="{{ event.speaker.image.url | slugify }}"
-              alt="Portrait of {{ event.speaker.name }}"
-              loading="lazy"
-              width= "580" height= "580"
-/>
-            </picture>
+            <img src="{{ event.speakers[0].image.url }}" alt="Portrait of {{ event.speakers[0].name }}" eleventy:widths="500"  />
           </div>
           <div class="up-next__info stack-2xs">
             <h2 class="text-step-0 color-gray-200">Up next:</h2>

@@ -24,18 +24,7 @@ eleventyComputed:
       {% for speaker in event.speakers %}
         {% set speakerImage %}
           <div class="person-image">
-            <picture>
-              <source
-                srcset="/images/speaker/{{ speakerImage }}.webp"
-                type="image/webp"
-              />
-              <img
-                src="/images/speaker/{{speakerImage}}.jpg"
-                alt="Portrait of {{ speaker.name }}"
-                loading="lazy"
-                width= "580" height= "580"
-              />
-            </picture>
+            <img src="{{ speaker.image.url }}" eleventy:widths="500" alt="Portrait of {{ speaker.name }}" />
           </div>
         {% endset %}
 

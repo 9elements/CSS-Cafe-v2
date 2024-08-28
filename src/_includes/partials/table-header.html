@@ -9,6 +9,9 @@
           {% if not loop.last %}& {% endif %}
         {% endfor %}
       </p>
+      <p class="text-step-0">
+        {{ event.dateTime | readableDate({ month: "short", day: "numeric", year: "numeric" }) }}
+      </p>
     </div>
 
     {% if event.youtubeVideoId %}

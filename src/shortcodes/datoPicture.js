@@ -32,7 +32,7 @@ module.exports = (datoImage) => {
 
   // Deconstruct datoImage and provide fallbacks for undefined values
   const {
-    formats = ["webp"],
+    formats = ["webp", "avif"],
     widths = [400, 800],
     sizes = "(min-width: 22em) 30vw, 100vw",
     classes = "",

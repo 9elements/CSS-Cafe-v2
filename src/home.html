@@ -39,18 +39,12 @@ eleventyComputed:
       {% for barista in baristas %}
         <div class="barista sidebar-left stack-s ">
           <div class="person-image">
-            <picture>
-              <source
-                srcset="/images/{{ barista.img }}.webp"
-                type="image/webp"
-              />
-              <img
-                src="/images/{{ barista.img }}.jpg"
-                alt="Portrait of {{ barista.name }}"
-                loading="lazy"
-                width= "580" height= "580"
-              />
-            </picture>
+            <img
+              src="/images/{{ barista.img }}.jpg"
+              alt="Portrait of {{ barista.name }}"
+              loading="lazy"
+              eleventy:widths="500"
+            />
           </div>
           <div class="barista__bodytext stack-2xs">
             <h3 class="text-step-1 weight-bold">{{ barista.name }}</h3>
