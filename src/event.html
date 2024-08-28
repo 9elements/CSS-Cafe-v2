@@ -1,0 +1,86 @@
+---
+pagination:
+  data: events.all
+  size: 1
+  alias: event
+eleventyComputed:
+  permalink: "{{ event.title | slugify }}/"
+  title: "{{ event.title }}"
+---
+
+{% extends "layouts/base.html" %}
+{% block content %}
+  <div class="wrapper stack-2xl">
+    {% if event.youtubeVideoId %}
+      <section class="talk-details">
+        <div class="plain-html stack-m">
+          {{ event.description | safe }}
+        </div>
+      </section>
+      <hr class="seperator">
+    {% endif %}
+
+    <section class="speaker-bio stack-2xl">
+      {% for speaker in event.speakers %}
+        {% set speakerImage %}
+          <div class="person-image">
+            <picture>
+              <source
+                srcset="/images/speaker/{{ speakerImage }}.webp"
+                type="image/webp"
+              />
+              <img
+                src="/images/speaker/{{speakerImage}}.jpg"
+                alt="Portrait of {{ speaker.name }}"
+                loading="lazy"
+                width= "580" height= "580"
+              />
+            </picture>
+          </div>
+        {% endset %}
+
+        {% set isEven = loop.index is even %}
+        <div class="speaker-info sidebar-{{ 'right' if isEven else 'left' }}">
+          {% if not isEven %}
+            {{ speakerImage | safe }}
+          {% endif %}
+          <div class="speaker-info__text stack-m">
+            <h2 class="font-head text-step-4 uppercase weight-bold">{{ speaker.name }}</h2>
+            {% if speaker.twitter.url %}
+              <p class="text-step-0 speaker-info__social"><span><svg class="speaker-info__icon" aria-hidden="true" focusable="false" >
+                <use xlink:href="/icons/icons.svg#twitter" />
+              </svg></span><a href="{{ speaker.twitter.url }}" target= "_blank" class="inline-link">@{{ speaker.twitter.text or speaker.twitter.url | replace("https://twitter.com/", "") }}</a></p>
+            </p>
+            {% endif %}
+            <div class="text-step-1 stack-s">{{ speaker.description | safe }}</div>
+          </div>
+          {% if isEven %}
+            {{ speakerImage | safe }}
+          {% endif %}
+        </div>
+        {% if loop.index < event.speakers.length %}          
+          <hr class="seperator">
+        {% endif %}
+      {% endfor %}
+
+
+    </section>
+    <hr class="seperator">
+    {% if shared %}
+      <section class="take-away">
+        <img src="/images/Coffee-Cup.webp" alt="" class="decoration" loading="lazy" width= "392" height= "412">
+        <img src="/images/take-away.svg" alt="" class="lettering" loading="lazy" width= "170" height= "148">
+        {% include "partials/take-away.html" %}
+      </section>
+      <hr class="seperator">
+    {% endif %}
+    <section class="featured-events stack-s">
+      <div class="featured switcher" style="--switcher-threshold: 45rem;">
+        {% for event in helpers.getSiblingContent(events.previous, event) %}
+          {% set eventYear = event.data.date | dateYearFilter %}
+          {% include "partials/similar-events.html" %}
+        {% endfor %}
+      </div>
+    </section>
+  </div>
+{% endblock %}

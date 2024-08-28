@@ -1,0 +1,74 @@
+---
+permalink: /
+title: Home
+eleventyComputed:
+  metaDesc: "Next Meetup: {{ events.next.dateTime }} | {{ events.next.title }} by {{events.next.speaker}}"
+---
+
+{% extends "layouts/base.html" %} {% block content %}
+
+<div class="wrapper stack-3xl" style="margin-top: var(--space-xl-2xl)" >
+  <section class="previous-events stack-l" id="previous-events">
+    <h2 class="text-step-8 font-head uppercase center">Previous events</h2>
+    <div class="event-list">
+      <div class="event-list__years stack-l tabbed">
+        <ul class="cluster">
+          {% for year in events.years %}
+            <li>
+              <a href="#events-{{year}}" class="">{{year}}</a>
+            </li>
+          {% endfor %}
+        </ul>
+        {% for year in events.years %}
+          <section id="events-{{year}}" class="stack-m">
+            {% for event in events.byYear[year] %}
+              {% set eventYear = event.dateTime | dateYearFilter  %}
+              {% if year == eventYear %}
+                {% include "partials/previous-event.html" %}
+              {% endif %}
+            {% endfor %}
+          </section>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+
+  <section class="stack-xl-2xl" id="hosts">
+    <h2 class="text-step-8 font-head uppercase center">Meet your Baristas</h2>
+    <div class="baristas grid-switcher">
+      {% for barista in baristas %}
+        <div class="barista sidebar-left stack-s ">
+          <div class="person-image">
+            <picture>
+              <source
+                srcset="/images/{{ barista.img }}.webp"
+                type="image/webp"
+              />
+              <img
+                src="/images/{{ barista.img }}.jpg"
+                alt="Portrait of {{ barista.name }}"
+                loading="lazy"
+                width= "580" height= "580"
+              />
+            </picture>
+          </div>
+          <div class="barista__bodytext stack-2xs">
+            <h3 class="text-step-1 weight-bold">{{ barista.name }}</h3>
+            <p class="text-step-0 barista__social"><span><svg class="barista__icon" aria-hidden="true" focusable="false">
+              <use xlink:href="/icons/icons.svg#twitter" />
+              </svg></span><a href="https://twitter.com/{{barista.twitter}}" target= "_blank" class="inline-link">@{{ barista.twitter }}</a>
+            </p>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </section>
+
+  <section class="stack-xl-2xl" id="submit">
+    <h2 class="text-step-8 font-head uppercase center">Submit your talk</h2>
+    {% include "partials/form.html" %}
+  </section>
+  <script src="/scripts/tablist.js"></script>
+  {% endblock %}
+
+</div>

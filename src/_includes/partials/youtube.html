@@ -1,12 +1,12 @@
 <!-- Web component for lite-youtube-embed -->
 <lite-youtube
-  videoid="{{ videoId }}"
-  style="background-image: url('https://i.ytimg.com/vi/{{ videoId }}/hqdefault.jpg');"
+  videoid="{{ event.youtubeVideoId }}"
+  style="background-image: url('https://i.ytimg.com/vi/{{ event.youtubeVideoId }}/hqdefault.jpg');"
   {% if params %} params="{{ params }}" {% endif %}
 >
   <button type="button" class="lty-playbtn">
-    <span class="lyt-visually-hidden">Play Video: {{ videoTitle }}</span>
+    <span class="lyt-visually-hidden">Play Video: {{ event.title }}</span>
   </button>
 </lite-youtube>
 <!-- Load the JS only when the component is needed -->
-<script src="/scripts/youtube.js"></script>
+<script src="/scripts/youtube.js" defer></script>

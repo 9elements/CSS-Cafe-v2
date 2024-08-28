@@ -1,18 +1,19 @@
 <section class="table-header stack-2xl">
   <div class="wrapper stack-2xl-3xl">
-    <h1 class="font-head uppercase color-gray-100 text-step-6">{{hero.body}}</h1>
+    <h1 class="font-head uppercase color-gray-100 text-step-6">We are an online-only event with talks on topics centered around CSS.</h1>
     <div class="table-header__body">
-      {% if upNext %}
+      {% if events.next %}
+        {% set event = events.next %}
         <div class="up-next sidebar-left">
           <div class="up-next__image">
             <picture>
               <source
-              srcset="images/speaker/{{upNext.speakerImage}}.webp"
+              srcset="images/speaker/{{ event.speaker.name | slugify }}.webp"
               type="image/webp"
-/>
+              />
               <img
-              src="images/speaker/{{upNext.speakerImage}}.jpg"
-              alt="Portrait of {{upNext.speaker}}"
+              src="{{ event.speaker.image.url | slugify }}"
+              alt="Portrait of {{ event.speaker.name }}"
               loading="lazy"
               width= "580" height= "580"
 />
@@ -20,14 +21,19 @@
           </div>
           <div class="up-next__info stack-2xs">
             <h2 class="text-step-0 color-gray-200">Up next:</h2>
-            <h3 class="font-head uppercase text-step-3 color-gray-100">{{upNext.topic}}</h3>
+            <h3 class="font-head uppercase text-step-3 color-gray-100">{{ event.title }}</h3>
             <p class="weight-semi-bold text-step-0">
-              <span class="weight-bold">{{upNext.date}}
-                {{upNext.time}}</span><br>with {{upNext.speaker}}
+              <span class="weight-bold">{{ event.dateTime | readableDate({ month: "short", day: "numeric", year: "numeric", hour: "numeric" }) }} CET</span>
+                {{ event.time }}</span><br>with 
+                {% for speaker in event.speakers %}
+                  <span>{{ speaker.name }}</span>
+                  {% if not loop.last %}& {% endif %}
+                {% endfor %}
+              </span>
             </p>
-            {% if upNext.meetupUrl %}
-              <a href="{{upNext.meetupUrl}}" class="text-step-0 inline-link">{{upNext.meetupText}}
-                <span class="sr-only">in {{upNext.topic }}</span></a>
+            {% if event.meetupLink %}
+              <a href="{{ event.meetupLink }}" class="text-step-0 inline-link">Attend via Meetup
+                <span class="sr-only">in {{ event.topic }}</span></a>
             {% endif %}
           </div>
         </div>

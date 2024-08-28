@@ -5,7 +5,7 @@ const sortByDisplayOrder = require("./src/utils/sort-by-display-order.js");
 // Filters
 const readableDate = require("./src/filters/readableDate.js");
 const w3DateFilter = require("./src/filters/w3-date-filter.js");
-const markdownFilter = require("./src/filters/markdown-filter.js");
+// const markdownFilter = require("./src/filters/markdown-filter.js");
 const dateFilter = require("./src/filters/date-filter.js");
 const dateYearFilter = require("./src/filters/date-year.js");
 const now = DateTime.now;
@@ -31,7 +31,7 @@ module.exports = (config) => {
   config.addFilter("limit", function (arr, limit) {
     return arr.slice(0, limit);
   });
-  config.addFilter("markdownFilter", markdownFilter);
+  // config.addFilter("markdownFilter", markdownFilter);
 
   // Collections - Returns sampleCollection items, sorted by display order
   // config.addCollection("sampleCollection", (collection) => {
@@ -42,22 +42,16 @@ module.exports = (config) => {
 
   // Add Shortcodes
   config.addShortcode("icon", require("./src/shortcodes/icon.js"));
+  config.addShortcode(
+    "datoPicture",
+    require("./src/shortcodes/datoPicture.js")
+  );
 
   // Only minify HTML if we are in production because it slows builds _right_ down
   if (isProduction) {
     config.addTransform("purgeCSS", purgeCSS);
     config.addTransform("htmlmin", htmlMinTransform);
   }
-
-  config.addCollection("events", (collection) => {
-    return [...collection.getFilteredByGlob("./src/events/*.md")]
-      .reverse()
-      .filter((item) => {
-        if (item.data.date <= now) {
-          return item;
-        }
-      });
-  });
 
   // Tell 11ty to use the .eleventyignore and ignore our .gitignore file
   config.setUseGitIgnore(false);

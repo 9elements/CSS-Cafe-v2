@@ -1,7 +1,16 @@
 <article class="event-card bg-white" >
-    <time datetime="{{event.data.date | w3DateFilter }}" class="event-card__date color-dark bg-gray-10 uppercase text-step-2 weight-bold">{{event.data.date | dateFilter}}</time>
+    <time datetime="{{ event.dateTime | w3DateFilter }}" class="event-card__date color-dark bg-gray-10 uppercase text-step-2 weight-bold">{{event.dateTime | dateFilter}}</time>
   <div class="event-card__info stack-m">
-    <a href="{{ event.url }}" class="color-gray-800 text-step-2 md:text-step-3 weight-bold event-card__link" ><span class="color-gray-600 text-step-0" style="display: block;">{{event.data.speaker}} {% if event.data.speaker2 %} & {{event.data.speaker2}} {% endif %}<span class="sr-only">:</span></span>{{event.data.title}}
+    <a href="/{{ event.title | slugify }}" class="color-gray-800 text-step-2 weight-bold event-card__link" >
+      <span class="color-gray-600 text-step-0" style="display: block;">
+        {% for speaker in event.speakers %}
+          {{ speaker.name }}
+          {% if not loop.last %}& {% endif %}
+        {% endfor %}
+        <span class="sr-only">:</span>
+      </span>
+
+      {{ event.title }}
     </a>
   </div>
   <div style="margin-top: auto;">
