@@ -1,9 +1,9 @@
 <a class="skip-link button" href="#main-content">Skip to content</a>
 <div class="masthead stack-l-xl">
   {% include "partials/site-head.html" %}
-  {% if masthead == "content" %}
-    {% include "partials/table-header.html" %}
-  {% else %}
+  {% if page.url == "/" %}
     {% include "partials/table-header-home.html" %}
+  {% else %}
+    {% include "partials/table-header.html" %}
   {% endif %}
 </div>

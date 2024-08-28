@@ -5,10 +5,12 @@ const sortByDisplayOrder = require("./src/utils/sort-by-display-order.js");
 // Filters
 const readableDate = require("./src/filters/readableDate.js");
 const w3DateFilter = require("./src/filters/w3-date-filter.js");
-const markdownFilter = require("./src/filters/markdown-filter.js");
+// const markdownFilter = require("./src/filters/markdown-filter.js");
 const dateFilter = require("./src/filters/date-filter.js");
 const dateYearFilter = require("./src/filters/date-year.js");
 const now = DateTime.now;
+
+const { eleventyImageTransformPlugin } = require("@11ty/eleventy-img");
 
 // Transforms
 const htmlMinTransform = require("./src/transforms/html-min-transform.js");
@@ -31,7 +33,7 @@ module.exports = (config) => {
   config.addFilter("limit", function (arr, limit) {
     return arr.slice(0, limit);
   });
-  config.addFilter("markdownFilter", markdownFilter);
+  // config.addFilter("markdownFilter", markdownFilter);
 
   // Collections - Returns sampleCollection items, sorted by display order
   // config.addCollection("sampleCollection", (collection) => {
@@ -42,22 +44,39 @@ module.exports = (config) => {
 
   // Add Shortcodes
   config.addShortcode("icon", require("./src/shortcodes/icon.js"));
+  config.addShortcode(
+    "datoPicture",
+    require("./src/shortcodes/datoPicture.js")
+  );
+
+  config.addPlugin(eleventyImageTransformPlugin, {
+    // which file extensions to process
+    extensions: "html",
+
+    outputDir: "./dist/assets/image/",
+    urlPath: "/assets/image/",
+
+    // Add any other Image utility options here:
+
+    // optional, output image formats
+    formats: ["avif", "webp", "jpeg"],
+
+    // optional, output image widths
+    widths: ["auto"],
+    sizes: "(max-width: 600px) 100vw, 50vw", // Responsive sizes
+
+    // optional, attributes assigned on <img> override these values.
+    defaultAttributes: {
+      loading: "lazy",
+      decoding: "async"
+    }
+  });
 
   // Only minify HTML if we are in production because it slows builds _right_ down
   if (isProduction) {
     config.addTransform("purgeCSS", purgeCSS);
     config.addTransform("htmlmin", htmlMinTransform);
   }
-
-  config.addCollection("events", (collection) => {
-    return [...collection.getFilteredByGlob("./src/events/*.md")]
-      .reverse()
-      .filter((item) => {
-        if (item.data.date <= now) {
-          return item;
-        }
-      });
-  });
 
   // Tell 11ty to use the .eleventyignore and ignore our .gitignore file
   config.setUseGitIgnore(false);

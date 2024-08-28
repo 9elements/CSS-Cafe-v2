@@ -1,5 +1,0 @@
-{
-  "layout": "layouts/single-event.html",
-  "permalink": "/{{ title | slugify }}/index.html",
-  "masthead": "content"
-}
