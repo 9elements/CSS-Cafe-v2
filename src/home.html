@@ -2,7 +2,7 @@
 permalink: /
 title: Home
 eleventyComputed:
-  metaDesc: "Next Meetup: {{ events.next.dateTime | readableDate({ month: 'short', day: 'numeric', year: 'numeric', hour: 'numeric' }) }} | {{ events.next.title }} by {{ events.next.speakerNames }}"
+  metaDesc: "Next Meetup: {{ events.next.dateTime | readableDate({ month: 'short', day: 'numeric', year: 'numeric', hour: 'numeric' }) }} CET | {{ events.next.title }} by {{ events.next.speakerNames }}"
 ---
 
 {% extends "layouts/base.html" %} {% block content %}
