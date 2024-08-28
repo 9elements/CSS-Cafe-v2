@@ -3,10 +3,7 @@
   <div class="event-card__info stack-m">
     <a href="/{{ event.title | slugify }}" class="color-gray-800 text-step-2 weight-bold event-card__link" >
       <span class="color-gray-600 text-step-0" style="display: block;">
-        {% for speaker in event.speakers %}
-          {{ speaker.name }}
-          {% if not loop.last %}& {% endif %}
-        {% endfor %}
+        {{ event.speakerNames }}
         <span class="sr-only">:</span>
       </span>
 
