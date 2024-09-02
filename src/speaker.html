@@ -1,0 +1,43 @@
+---
+permalink: "speaker"
+title: Speaker
+eleventyComputed:
+  metaDesc: "Discover our Wall of Fame"
+---
+{% extends "layouts/base.html" %}
+{% block content %}
+    <h1>Speaker</h1>
+    {{ people | dump }}
+
+    <ul class="grid-switcher">
+        {% for speaker in allspeaker %}
+            <li class="speaker-card">
+                {% set speakerImage %}
+                <div class="person-image">
+                    <img class="speaker-card__image" src="{{ speaker.image.url }}" eleventy:widths="500" alt="Portrait of {{ speaker.name }}"/>
+                </div>
+                {% endset %}
+
+                <h3>{{ speaker.name }}</h3>
+                <form method="dialog">
+                    <button class="speaker-card__link" aria-haspopup="dialog" aria-controls="dialog:{{ speaker.name }}"></button>
+                </form>
+
+                <dialog id="dialog:{{ speaker.name }}" class="bg-white p-m">
+                    <form method="dialog">
+                        <button class="close-modal">
+                            <span class="sr-only">Modal schließen</span>
+                            {% icon icon = "close",
+                            width = "1rem" %}
+                        </button>
+                    </form>
+                    <div class="stack-l">
+                        {{ speaker.name }}
+                    </div>
+                </dialog>
+            </li>
+        {% endfor %}
+    </ul>
+
+    <script src="/scripts/dialog.js"></script>
+{% endblock %}

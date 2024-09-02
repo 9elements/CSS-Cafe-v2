@@ -1,0 +1,27 @@
+dialog {
+  border: none;
+  padding: var(--space-xl) var(--space-l);
+  width: 90vw;
+  max-width: 60ch;
+  margin-inline: auto;
+
+  .close-modal {
+    background: var(--color-black);
+    border: none;
+    cursor: pointer;
+    width: 3rem;
+    height: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 999px;
+    position: absolute;
+    right: var(--space-l);
+    top: var(--space-l);
+  }
+
+  &::backdrop {
+    background: var(--color-black);
+    opacity: 0.9;
+  }
+}
