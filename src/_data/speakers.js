@@ -6,6 +6,9 @@ module.exports = async function () {
       allSpeakers(first: 100 orderBy: name_ASC) {
         name
         description
+        image {
+          url
+        }
         events: _allReferencingEvents {
           title
           dateTime
