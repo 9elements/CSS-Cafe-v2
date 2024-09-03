@@ -1,4 +1,11 @@
 const datoRequest = async (query, isPreview = false) => {
+  if (!process.env.DATO_READONLY_API_TOKEN) {
+    console.error(
+      "❗❗ [DATO Fetch Error] You need to set the DATO_READONLY_API_TOKEN environment variable in the .env file."
+    );
+    return;
+  }
+
   const endpoint = isPreview
     ? `https://graphql.datocms.com/preview`
     : `https://graphql.datocms.com/`;
