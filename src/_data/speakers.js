@@ -3,7 +3,7 @@ const { datoRequest } = require("../dato/index");
 module.exports = async function () {
   const { allSpeakers: speakers } = await datoRequest(`
     {
-      allSpeakers(first: 100) {
+      allSpeakers(first: 100 orderBy: name_ASC) {
         name
         description
         events: _allReferencingEvents {
@@ -11,6 +11,10 @@ module.exports = async function () {
           dateTime
           speakers {
             name
+            description
+            image {
+              url
+            }
           }
         }
       }

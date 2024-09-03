@@ -1,6 +1,6 @@
 ---
-permalink: "/speakers"
-title: Speakers
+permalink: "speaker/"
+title: Speaker
 eleventyComputed:
   metaDesc: "Discover our Wall of Fame"
 ---
@@ -9,12 +9,12 @@ eleventyComputed:
     <h1>Speakers</h1>
     {{ speakers | dump }}
 
-    <ul class="grid-switcher">
-        {% for speaker in allspeaker %}
+    <ul class="grid-switcher" role="list">
+        {% for speaker in speakers %}
             <li class="speaker-card">
                 {% set speakerImage %}
-                <div class="person-image">
-                    <img class="speaker-card__image" src="{{ speaker.image.url }}" eleventy:widths="500" alt="Portrait of {{ speaker.name }}"/>
+                <div class="speaker-card__image">
+                    <img src="{{ speaker.image.url }}" eleventy:widths="500" alt="Portrait of {{ speaker.name }}"/>
                 </div>
                 {% endset %}
 

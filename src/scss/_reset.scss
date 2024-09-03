@@ -7,7 +7,6 @@
   box-sizing: border-box;
 }
 
-
 /* Remove default margin */
 body,
 h1,
@@ -41,10 +40,16 @@ body {
   line-height: 1.5;
 }
 
-
 /* A elements that don’t have a class get default styles */
 a:not([class]) {
   text-decoration-skip-ink: auto;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul:where([role="list"]),
+ol:where([role="list"]) {
+  list-style-type: none;
+  padding: 0;
 }
 
 /* Make images easier to work with */
