@@ -1,6 +1,5 @@
 const { DateTime } = require("luxon");
 // Utils
-const sortByDisplayOrder = require("./src/utils/sort-by-display-order.js");
 
 // Filters
 const readableDate = require("./src/filters/readableDate.js");
@@ -8,7 +7,6 @@ const w3DateFilter = require("./src/filters/w3-date-filter.js");
 // const markdownFilter = require("./src/filters/markdown-filter.js");
 const dateFilter = require("./src/filters/date-filter.js");
 const dateYearFilter = require("./src/filters/date-year.js");
-const now = DateTime.now;
 
 const { eleventyImageTransformPlugin } = require("@11ty/eleventy-img");
 
@@ -33,14 +31,6 @@ module.exports = (config) => {
   config.addFilter("limit", function (arr, limit) {
     return arr.slice(0, limit);
   });
-  // config.addFilter("markdownFilter", markdownFilter);
-
-  // Collections - Returns sampleCollection items, sorted by display order
-  // config.addCollection("sampleCollection", (collection) => {
-  //   return sortByDisplayOrder(
-  //     collection.getFilteredByGlob("./src/sample-collection/*.md")
-  //   );
-  // });
 
   // Add Shortcodes
   config.addShortcode("icon", require("./src/shortcodes/icon.js"));
