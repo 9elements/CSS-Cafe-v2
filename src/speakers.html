@@ -1,13 +1,13 @@
 ---
-permalink: "speaker"
-title: Speaker
+permalink: "/speakers"
+title: Speakers
 eleventyComputed:
   metaDesc: "Discover our Wall of Fame"
 ---
 {% extends "layouts/base.html" %}
 {% block content %}
-    <h1>Speaker</h1>
-    {{ people | dump }}
+    <h1>Speakers</h1>
+    {{ speakers | dump }}
 
     <ul class="grid-switcher">
         {% for speaker in allspeaker %}
