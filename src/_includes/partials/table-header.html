@@ -4,7 +4,7 @@
       <h2 class="font-head text-step-6 uppercase">{{ event.title }}</h2>
       <p class="text-step-2 author">
         by
-        {{ event.speakerNames }}
+        {{ event.speakers | speakerNames }}
       </p>
       <p class="text-step-0">
         {{ event.dateTime | readableDate({ month: "short", day: "numeric", year: "numeric" }) }}

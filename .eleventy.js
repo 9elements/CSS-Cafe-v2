@@ -7,6 +7,7 @@ const w3DateFilter = require("./src/filters/w3-date-filter.js");
 // const markdownFilter = require("./src/filters/markdown-filter.js");
 const dateFilter = require("./src/filters/date-filter.js");
 const dateYearFilter = require("./src/filters/date-year.js");
+const speakerNamesFilter = require("./src/filters/speaker-names.js");
 
 const { eleventyImageTransformPlugin } = require("@11ty/eleventy-img");
 
@@ -28,6 +29,7 @@ module.exports = (config) => {
   config.addFilter("w3DateFilter", w3DateFilter);
   config.addFilter("dateFilter", dateFilter);
   config.addFilter("dateYearFilter", dateYearFilter);
+  config.addFilter("speakerNames", speakerNamesFilter);
   config.addFilter("limit", function (arr, limit) {
     return arr.slice(0, limit);
   });

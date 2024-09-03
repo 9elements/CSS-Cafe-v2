@@ -1,7 +1,7 @@
 const { datoRequest } = require("../dato/index");
 
 module.exports = async function () {
-  let { allEvents: events } = await datoRequest(`
+  const { allEvents: events } = await datoRequest(`
     {
       allEvents(first: 100 orderBy: dateTime_DESC) {
         id
@@ -40,11 +40,6 @@ module.exports = async function () {
       }
     }
   `);
-
-  events = events.map((event) => ({
-    speakerNames: event.speakers.map((speaker) => speaker.name).join(" & "),
-    ...event
-  }));
 
   const nextEvent = events.find((event) => {
     const eventDate = new Date(event.dateTime);

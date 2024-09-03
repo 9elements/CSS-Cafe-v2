@@ -7,7 +7,7 @@ eleventyComputed:
 {% extends "layouts/base.html" %}
 {% block content %}
     <h1>Speakers</h1>
-    {{ people | dump }}
+    {{ speakers | dump }}
 
     <ul class="grid-switcher">
         {% for speaker in allspeaker %}

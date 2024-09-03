@@ -14,7 +14,7 @@
             <p class="weight-semi-bold text-step-0">
               <span class="weight-bold">{{ event.dateTime | readableDate({ month: "short", day: "numeric", year: "numeric", hour: "numeric" }) }} CET</span>
                 {{ event.time }}</span><br>with 
-                {{ event.speakerNames }}
+                {{ event.speakers | speakerNames }}.
               </span>
             </p>
             {% if event.meetupLink %}
