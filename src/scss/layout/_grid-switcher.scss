@@ -1,43 +1,32 @@
+/*
+  This switcher layout accepts two breakpoints. At the first breakpoint (--gs-bp-medium) it switches from the
+  initial column count (--gs-columns-small) to the medium column count (--gs-columns-medium).
+  Then when reaching the second breakpoint (--gs-bp-large) it switches to the large column count (--gs-columns-large)
+*/
 .grid-switcher {
-  > * {
-    max-width: 18rem;
-  }
+  /* define fallback values once, so they don't need to be repeated every time */
+  --_gs-columns-small: var(--gs-columns-small, 1);
+  --_gs-bp-medium: var(--gs-bp-medium, 25rem);
+  --_gs-columns-medium: var(--gs-columns-medium, 2);
+  --_gs-bp-large: var(--gs-bp-large, 50rem);
+  --_gs-columns-large: var(--gs-columns-large, 4);
+  --_gs-gap: var(--gs-gap, 1rem);
 
-  > * + * {
-    margin-top: 5em;
-  }
-}
-
-@supports (display: grid) and (width: min(10px, 40px)) and
-  (color: var(--primary)) {
-  .grid-switcher {
-    --dgs-column-width: Max(
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fill,
+    minmax(
       clamp(
-        (100% / var(--dgs-column-count-l, 3)) - var(--dgs-gap, 1rem),
-        (var(--dgs-threshold-l, 45rem) - 100%) * 999,
-        (100% / var(--dgs-column-count-m, 2)) - var(--dgs-gap, 1rem)
+        clamp(
+          100% / var(--_gs-columns-large) - var(--_gs-gap),
+          (var(--_gs-bp-large) - 100%) * 1000,
+          100% / var(--_gs-columns-medium) - var(--_gs-gap)
+        ),
+        (var(--_gs-bp-medium) - 100%) * 1000,
+        100% / var(--_gs-columns-small) - var(--_gs-gap)
       ),
-      clamp(
-        0px,
-        (var(--dgs-threshold-m, 45rem) - 100%) * 999,
-        (100% / var(--dgs-column-count-s, 1)) - var(--dgs-gap, 1rem)
-      )
-    );
-
-    display: grid;
-
-    grid-template-columns: repeat(
-      auto-fit,
-      minmax(var(--dgs-column-width), 1fr)
-    );
-
-    gap:
-        /* Vertical Gap */ var(--dgs-gap-vertical, var(--dgs-gap, 1rem))
-      /* Horizontal Gap */ var(--dgs-gap, 1rem);
-
-    > * {
-      max-width: unset;
-      margin: unset;
-    }
-  }
+      1fr
+    )
+  );
+  gap: var(--gs-gap-vertical, var(--_gs-gap)) var(--_gs-gap);
 }

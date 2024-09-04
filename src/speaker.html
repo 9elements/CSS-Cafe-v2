@@ -1,43 +1,55 @@
 ---
-permalink: "speaker/"
-title: Speaker
+permalink: "speakers/"
+title: Speakers
 eleventyComputed:
   metaDesc: "Discover our Wall of Fame"
 ---
 {% extends "layouts/base.html" %}
 {% block content %}
-    <h1>Speakers</h1>
-    {{ speakers | dump }}
 
-    <ul class="grid-switcher" role="list">
-        {% for speaker in speakers %}
-            <li class="speaker-card">
-                {% set speakerImage %}
-                <div class="speaker-card__image">
-                    <img src="{{ speaker.image.url }}" eleventy:widths="500" alt="Portrait of {{ speaker.name }}"/>
-                </div>
-                {% endset %}
+    <div class="stack-3xl">
+        <ul class="wrapper | grid-switcher" role="list" style="
+                --gs-columns-small: var(--gs-columns-small, 1);
+                --gs-bp-medium: var(--gs-bp-medium, 25rem);
+                --gs-columns-medium: var(--gs-columns-medium, 2);
+                --gs-bp-large: var(--gs-bp-large, 50rem);
+                --gs-columns-large: var(--gs-columns-large, 4);
+                --gs-gap: 4px; 
+                --gs-gap-vertical: var(--space-xl);
+            ">
+            {% for speaker in speakers %}
+                <li class="speaker-card | stack-m">
+                    <div class="speaker-card__image">
+                        <img src="{{ speaker.image.url }}" eleventy:widths="500" alt="Portrait of {{ speaker.name }}"/>
+                    </div>
 
-                <h3>{{ speaker.name }}</h3>
-                <form method="dialog">
-                    <button class="speaker-card__link" aria-haspopup="dialog" aria-controls="dialog:{{ speaker.name }}"></button>
-                </form>
+                    <h3>{{ speaker.name }}</h3>
+                    <form method="dialog">
+                        <button class="speaker-card__link js-dialog-trigger" aria-haspopup="dialog" aria-controls="dialog:{{ speaker.name }}"></button>
+                    </form>
+                </li>
 
                 <dialog id="dialog:{{ speaker.name }}" class="bg-white p-m">
                     <form method="dialog">
                         <button class="close-modal">
                             <span class="sr-only">Modal schließen</span>
-                            {% icon icon = "close",
-                            width = "1rem" %}
+                            <svg width="17" height="18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="m1.063 1.563 15 15M16.063 1.563l-15 15" stroke="#000" stroke-width="2"/></svg>
                         </button>
                     </form>
                     <div class="stack-l">
                         {{ speaker.name }}
                     </div>
                 </dialog>
-            </li>
-        {% endfor %}
-    </ul>
+            {% endfor %}
+        </ul>
+
+        <div class="wrapper">
+            <section class="stack-xl-2xl" id="submit">
+                <h2 class="text-step-8 font-head uppercase center">Submit your talk</h2>
+                {% include "partials/form.html" %}
+            </section>
+        </div>
+    </div>
 
     <script src="/scripts/dialog.js"></script>
 {% endblock %}

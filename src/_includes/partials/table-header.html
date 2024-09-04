@@ -1,27 +1,32 @@
 <section class="table-header">
-  <div class="wrapper stack-2xl">
-    <div class="stack-2xs">
-      <h2 class="font-head text-step-6 uppercase">{{ event.title }}</h2>
-      <p class="text-step-2 author">
+  <div class="stack-2xl">
+    <div class="wrapper-small">
+      <div class="stack-2xs">
+        <h2 class="font-head text-step-6 uppercase">{{ event.title }}</h2>
+        <p class="text-step-2 author">
         by
         {{ event.speakers | speakerNames }}
-      </p>
-      <p class="text-step-0">
-        {{ event.dateTime | readableDate({ month: "short", day: "numeric", year: "numeric" }) }}
-      </p>
+        </p>
+        <p class="text-step-0">
+          {{ event.dateTime | readableDate({ month: "short", day: "numeric", year: "numeric" }) }}
+        </p>
+      </div>
     </div>
 
-    {% if event.youtubeVideoId %}
-      <div class="video-shadow">
-        {% include 'partials/youtube.html' %}
-      </div>
-    {% else %}
-      <section class="talk-details" style="margin-bottom: var(--space-2xl);">
-        <div class="plain-html stack-m">
-          {{ event.description | safe }}
+    <div class="wrapper">
+      {% if event.youtubeVideoId %}
+        <div class="video-shadow">
+          {% include 'partials/youtube.html' %}
         </div>
-      </section>
-    {% endif %}
+      {% else %}
+        <section class="talk-details" style="margin-bottom: var(--space-2xl);">
+          <div class="plain-html stack-m">
+            {{ event.description | safe }}
+          </div>
+        </section>
+      {% endif %}
+    </div>
   </div>
+
   <div class="table"></div>
 </section>

@@ -4,9 +4,10 @@ dialog {
   width: 90vw;
   max-width: 60ch;
   margin-inline: auto;
+  overflow: visible;
 
   .close-modal {
-    background: var(--color-black);
+    background: var(--color-white);
     border: none;
     cursor: pointer;
     width: 3rem;
@@ -16,12 +17,12 @@ dialog {
     align-items: center;
     border-radius: 999px;
     position: absolute;
-    right: var(--space-l);
-    top: var(--space-l);
+    right: 0;
+    top: calc(var(--space-2xl) * -1);
   }
 
   &::backdrop {
-    background: var(--color-black);
+    background: var(--color-dark);
     opacity: 0.9;
   }
 }

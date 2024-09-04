@@ -4,7 +4,6 @@
   position: relative;
   z-index: 2;
   margin-bottom: calc(var(--video-offset) * -1);
-  max-width: 50rem;
   box-shadow: 0 5px 0 #fff inset;
 
   > * {

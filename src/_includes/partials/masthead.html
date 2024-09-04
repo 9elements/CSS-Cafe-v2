@@ -1,8 +1,10 @@
 <a class="skip-link button" href="#main-content">Skip to content</a>
-<div class="masthead stack-l-xl">
+<div class="masthead stack-2xl-3xl">
   {% include "partials/site-head.html" %}
   {% if page.url == "/" %}
     {% include "partials/table-header-home.html" %}
+  {% elif page.url == "/speakers/" %}
+    {% include "partials/table-header-speakers.html" %}
   {% else %}
     {% include "partials/table-header.html" %}
   {% endif %}

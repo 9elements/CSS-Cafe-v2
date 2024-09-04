@@ -3,10 +3,19 @@
  * Sets a max width, adds a consisten gutter and horizontally
  * centers the contents
  */
-.wrapper {
-  max-width: 63.75rem;
+
+.wrapper,
+.wrapper-small {
   padding: 0 var(--space-m);
   margin-left: auto;
   margin-right: auto;
   position: relative;
+}
+
+.wrapper {
+  max-width: 80rem;
+}
+
+.wrapper-small {
+  max-width: 60rem;
 }
