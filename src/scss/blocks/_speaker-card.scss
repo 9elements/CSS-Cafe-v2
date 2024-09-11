@@ -19,6 +19,7 @@
   .speaker-card__link {
     position: absolute;
     inset: 0;
+    cursor: pointer;
   }
 
   button {
@@ -41,8 +42,6 @@
   }
 
   &:hover {
-    cursor: pointer;
-
     .speaker-card__image {
       box-shadow: 3.29604px 3.29604px 4.94406px #000000;
       transform: matrix(1, -0.03, 0.06, 1, 0, 0);
