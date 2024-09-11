@@ -13,19 +13,22 @@
       </div>
     </div>
 
-    <div class="wrapper">
-      {% if event.youtubeVideoId %}
+    {% if event.youtubeVideoId %}
+      <div class="wrapper">
         <div class="video-shadow">
           {% include 'partials/youtube.html' %}
         </div>
-      {% else %}
+      </div>
+    {% else %}
+      <div class="wrapper-small">
         <section class="talk-details" style="margin-bottom: var(--space-2xl);">
           <div class="plain-html stack-m">
             {{ event.description | safe }}
           </div>
         </section>
-      {% endif %}
-    </div>
+      </div>
+    {% endif %}
+
   </div>
 
   <div class="table"></div>

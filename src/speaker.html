@@ -48,6 +48,9 @@ eleventyComputed:
                         </div>
                         <hr class="seperator">
                         <h3 class="font-head uppercase text-step-2 color-dark">Talks</h3>
+                        {% for event in speaker.events %}
+                            {% include "partials/previous-event.html" %}
+                        {% endfor %}
                     </dialog>
                 {% endfor %}
             </ul>
