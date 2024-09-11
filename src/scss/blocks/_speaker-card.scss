@@ -18,7 +18,8 @@
     z-index: -1;
   }
 
-  &:hover {
+  &:hover,
+  &:has(:focus-visible) {
     & .speaker-card__image {
       box-shadow: 3.29604px 3.29604px 4.94406px #000000;
       transform: matrix(1, -0.03, 0.06, 1, 0, 0);
@@ -31,6 +32,10 @@
     & .speaker-card__name {
       color: var(--color-dark);
     }
+  }
+
+  &:has(:focus-visible) {
+    outline: 2px dashed get-color("primary");
   }
 }
 
@@ -52,6 +57,10 @@
   cursor: pointer;
   background: transparent;
   border: none;
+
+  &:focus {
+    outline: none;
+  }
 }
 
 .speaker-card__name {

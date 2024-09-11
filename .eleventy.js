@@ -52,7 +52,7 @@ module.exports = (config) => {
     // Add any other Image utility options here:
 
     // optional, output image formats
-    formats: ["avif", "webp", "jpeg"],
+    formats: ["avif", "webp"],
 
     // optional, output image widths
     widths: ["auto"],
