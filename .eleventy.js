@@ -18,6 +18,7 @@ const purgeCSS = require("./src/transforms/css-purge-inline.js");
 // Create a helpful production flag
 const isProduction = process.env.NODE_ENV === "production";
 
+/** @param {import("./node_modules/@11ty/eleventy/src/UserConfig.js").default} config */
 module.exports = (config) => {
   // Set directories to pass through to the dist folder
   config.addPassthroughCopy("./src/fonts/");

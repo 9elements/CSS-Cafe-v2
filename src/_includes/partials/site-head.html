@@ -29,9 +29,10 @@
             </li>
           {% endfor %}
           </ul>
-          {% if page.url !== "/"  %}
-            <a href="/" class="go-back uppercase text-step-0 weight-bold">< go back </a>
+          {% if not ["/", "/speakers"].includes(page.url) %}
+            <a href="/" aria-label="Go back" class="go-back uppercase text-step-0 weight-bold">< go back </a>
           {% endif %}
+          
         </div>
     </nav>
   </div>

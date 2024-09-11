@@ -36,11 +36,14 @@
   }
 }
 
+:where(.inline-link) {
+  color: get-color("secondary-10");
+}
+
 .inline-link {
   display: inline-block;
   pointer-events: auto;
   cursor: pointer;
-  color: get-color("secondary-10");
   @include apply-utility("weight", "semi-bold");
   text-decoration: underline;
 

@@ -9,6 +9,10 @@ module.exports = async function () {
         image {
           url
         }
+        twitter {
+          text
+          url
+        }
         events: _allReferencingEvents {
           title
           dateTime

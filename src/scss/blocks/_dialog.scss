@@ -4,7 +4,7 @@ dialog {
   width: 90vw;
   max-width: 80ch;
   margin-inline: auto;
-  overflow: visible;
+  overflow: auto;
 
   .close-modal {
     background: var(--color-white);
@@ -15,10 +15,10 @@ dialog {
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: 999px;
+    border-radius: 0.25rem;
     position: absolute;
     right: 0;
-    top: calc(var(--space-2xl) * -1);
+    top: 0;
   }
 
   &::backdrop {

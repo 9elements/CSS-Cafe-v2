@@ -1,6 +1,7 @@
 ---
-permalink: "speakers/"
+permalink: "/speakers"
 title: Speakers
+hideBackButton: true
 eleventyComputed:
   metaDesc: "Discover our Wall of Fame"
 ---
@@ -9,31 +10,29 @@ eleventyComputed:
 
     <div class="stack-3xl">
         <ul class="wrapper | grid-switcher" role="list" style="
-                --gs-columns-small: var(--gs-columns-small, 1);
-                --gs-bp-medium: var(--gs-bp-medium, 25rem);
-                --gs-columns-medium: var(--gs-columns-medium, 2);
-                --gs-bp-large: var(--gs-bp-large, 50rem);
-                --gs-columns-large: var(--gs-columns-large, 4);
-                --gs-gap: 4px; 
-                --gs-gap-vertical: var(--space-xl);
-            ">
+          --gs-columns-small: var(--gs-columns-small, 1);
+          --gs-bp-medium: var(--gs-bp-medium, 25rem);
+          --gs-columns-medium: var(--gs-columns-medium, 2);
+          --gs-bp-large: var(--gs-bp-large, 50rem);
+          --gs-columns-large: var(--gs-columns-large, 4);
+          --gs-gap: 4px; 
+          --gs-gap-vertical: var(--space-xl);
+        ">
             {% for speaker in speakers %}
                 <li class="speaker-card | stack-m">
                     <div class="speaker-card__image">
                         <img src="{{ speaker.image.url }}" eleventy:widths="500" alt="Portrait of {{ speaker.name }}"/>
                     </div>
 
-                    <h3>{{ speaker.name }}</h3>
-                    <form method="dialog">
-                        <button class="speaker-card__link js-dialog-trigger" aria-haspopup="dialog" aria-controls="dialog:{{ speaker.name }}"></button>
-                    </form>
+                    <h3 class="speaker-card__name">{{ speaker.name }}</h3>
+                    <button class="speaker-card__button js-dialog-trigger" aria-haspopup="dialog" aria-controls="dialog:{{ speaker.name | slugify }}" aria-label="View more Info for {{ speaker.name }}"></button>
                 </li>
 
-                <dialog id="dialog:{{ speaker.name }}" class="bg-white p-m | speaker-details">
+                <dialog id="dialog:{{ speaker.name | slugify }}" class="bg-white p-m | speaker-details">
                     <form method="dialog">
                         <button class="close-modal">
-                            <span class="sr-only">Modal schließen</span>
-                            <svg width="17" height="18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="m1.063 1.563 15 15M16.063 1.563l-15 15" stroke="#000" stroke-width="2"/></svg>
+                          <span class="sr-only">Modal schließen</span>
+                          <svg width="17" height="18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="m1.063 1.563 15 15M16.063 1.563l-15 15" stroke="#000" stroke-width="2"/></svg>
                         </button>
                     </form>
                     <div class="stack-l">
@@ -43,14 +42,32 @@ eleventyComputed:
                             </div>
                             <div class="speaker-info__text stack-s">
                                 <h2 class="font-head text-step-4 uppercase weight-bold color-dark">{{ speaker.name }}</h2>
+                                {% if speaker.twitter.url %}
+                                  <p class="text-step-0 color-secondary-800 speaker-info__social">
+                                    <span>
+                                      <svg class="speaker-info__icon" aria-hidden="true" focusable="false" >
+                                        <use xlink:href="/icons/icons.svg#twitter"/>
+                                      </svg>
+                                    </span>
+                                    <a href="{{ speaker.twitter.url }}" target= "_blank" class="inline-link color-secondary-800">@{{ speaker.twitter.text or speaker.twitter.url | replace("https://twitter.com/", "") }}</a>
+                                  </p>
+                                </p>
+                              {% endif %}
                                 <div class="text-step-0 stack-s">{{ speaker.description | safe }}</div>
                             </div>
                         </div>
                         <hr class="seperator">
-                        <h3 class="font-head uppercase text-step-2 color-dark">Talks</h3>
-                        {% for event in speaker.events %}
-                            {% include "partials/previous-event.html" %}
-                        {% endfor %}
+                        <div class="stack-m">
+
+                          <h3 class="font-head uppercase text-step-2 color-dark">Talks</h3>
+                          <ul role="list" class="stack-s">
+                            {% for event in speaker.events %}
+                            <li>
+                              {% include "partials/previous-event.html" %}
+                            </li>
+                            {% endfor %}
+                          </ul>
+                        </div>
                     </dialog>
                 {% endfor %}
             </ul>

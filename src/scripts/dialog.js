@@ -31,3 +31,34 @@ function addCloseListeners(dialog) {
     }
   });
 }
+
+// On page load
+document.addEventListener("hashchange", () => {
+  const dialog = document.getElementById(location.hash.slice(1));
+  if (dialog) {
+    dialog.showModal();
+    addCloseListeners(dialog);
+  }
+
+  // Close dialog when the hash is removed or changed
+  if (!location.hash) {
+    const openDialog = document.querySelector("dialog[open]");
+    openDialog.close();
+  }
+});
+
+// On back button click
+window.addEventListener("popstate", () => {
+  const openDialog = document.querySelector("dialog[open]");
+  if (openDialog) {
+    openDialog.close();
+  }
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  const dialog = document.getElementById(location.hash.slice(1));
+  if (dialog) {
+    dialog.showModal();
+    addCloseListeners(dialog);
+  }
+});

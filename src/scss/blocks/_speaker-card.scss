@@ -4,34 +4,11 @@
   border-bottom: 4px dotted #92def1;
   padding: var(--space-m);
 
-  .speaker-card__image {
-    box-shadow: 3.29604px 3.29604px 43.2px #000000;
-    transition: 0.3s ease;
-
-    img {
-      aspect-ratio: 1/1;
-      width: 100%;
-      height: auto;
-      object-fit: cover;
-    }
-  }
-
-  .speaker-card__link {
-    position: absolute;
-    inset: 0;
-    cursor: pointer;
-  }
-
-  button {
-    background: transparent;
-    border: none;
-  }
-
   &::after {
     content: "";
     width: 87%;
     height: 40%;
-    bottom: var(--space-m);
+    bottom: var(--space-xs);
     position: absolute;
     left: 0;
     background: var(--color-secondary-10);
@@ -42,7 +19,7 @@
   }
 
   &:hover {
-    .speaker-card__image {
+    & .speaker-card__image {
       box-shadow: 3.29604px 3.29604px 4.94406px #000000;
       transform: matrix(1, -0.03, 0.06, 1, 0, 0);
     }
@@ -51,8 +28,32 @@
       opacity: 1;
     }
 
-    h3 {
+    & .speaker-card__name {
       color: var(--color-dark);
     }
   }
+}
+
+.speaker-card__image {
+  box-shadow: 3.29604px 3.29604px 43.2px #000000;
+  transition: 0.3s ease;
+
+  img {
+    aspect-ratio: 1/1;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+}
+
+.speaker-card__button {
+  position: absolute;
+  inset: 0;
+  cursor: pointer;
+  background: transparent;
+  border: none;
+}
+
+.speaker-card__name {
+  margin-bottom: var(--space-xs);
 }
