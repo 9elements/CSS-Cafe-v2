@@ -36,49 +36,8 @@ eleventyComputed:
       </section>
     </div>
 
-    <div class="wrapper-small">
-      <section class="stack-xl-2xl" id="hosts">
-        <h2 class="text-step-8 font-head uppercase center">Meet your Baristas</h2>
-        <div class="baristas grid-switcher" style="
-        --gs-bp-medium: 35rem;
-        --gs-columns-large: 2;
-        --gs-gap: var(--space-xl);
-        --gs-gap-vertical: var(--space-m);
-        ">
-          {% for barista in baristas %}
-            <div class="barista sidebar-left stack-s ">
-              <div class="person-image">
-                <img
-              src="/images/{{ barista.img }}.jpg"
-              alt="Portrait of {{ barista.name }}"
-              loading="lazy"
-              eleventy:widths="500"
-/>
-              </div>
-              <div class="barista__bodytext stack-2xs">
-                <h3 class="text-step-1 weight-bold">{{ barista.name }}</h3>
-                <p class="text-step-0 barista__social">
-                  <span>
-                    <svg class="barista__icon" aria-hidden="true" focusable="false">
-                      <use xlink:href="/icons/icons.svg#twitter"/>
-                    </svg>
-                  </span>
-                  <a href="https://twitter.com/{{barista.twitter}}" target= "_blank" class="inline-link">@{{ barista.twitter }}</a>
-                </p>
-              </div>
-            </div>
-          {% endfor %}
-        </div>
-      </section>
-    </div>
-
-    <div class="wrapper">
-      <section class="stack-xl-2xl" id="submit">
-        <h2 class="text-step-8 font-head uppercase center">Submit your talk</h2>
-        {% include "partials/form.html" %}
-      </section>
-      <script src="/scripts/tablist.js"></script>
-    </div>
+    {% include "partials/sections/baristas.html" %}
+    {% include "partials/sections/submit-talk.html" %}
   {% endblock %}
 
 </div>

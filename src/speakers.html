@@ -5,6 +5,7 @@ metaDesc: "Discover our Wall of Fame"
 ---
 {% extends "layouts/base.html" %}
 {% block content %}
+<div class="stack-3xl">
   <ul
     class="wrapper | grid-switcher"
     role="list"
@@ -39,6 +40,10 @@ metaDesc: "Discover our Wall of Fame"
     {% endfor %}
   </ul>
 
+  {% include "partials/sections/baristas.html" %}
+  {% include "partials/sections/submit-talk.html" %}
+</div>
+  {# Speaker Dialogs #}
   {% for speaker in speakers %}
     <dialog
       id="dialog:{{ speaker.name | slugify }}"
@@ -71,25 +76,24 @@ metaDesc: "Discover our Wall of Fame"
               {{ speaker.name }}
             </h2>
             {% if speaker.twitter.url %}
-            <p class="text-step-0 color-secondary-800 speaker-info__social">
-              <span>
-                <svg
-                  class="speaker-info__icon"
-                  aria-hidden="true"
-                  focusable="false"
+              <p class="text-step-0 color-secondary-800 speaker-info__social">
+                <span>
+                  <svg
+                    class="speaker-info__icon"
+                    aria-hidden="true"
+                    focusable="false"
+                  >
+                    <use xlink:href="/icons/icons.svg#twitter" />
+                  </svg>
+                </span>
+                <a
+                  href="{{ speaker.twitter.url }}"
+                  target="_blank"
+                  class="inline-link color-secondary-800"
+                  >@{{ speaker.twitter.text or speaker.twitter.url |
+                  replace("https://twitter.com/", "") }}</a
                 >
-                  <use xlink:href="/icons/icons.svg#twitter" />
-                </svg>
-              </span>
-              <a
-                href="{{ speaker.twitter.url }}"
-                target="_blank"
-                class="inline-link color-secondary-800"
-                >@{{ speaker.twitter.text or speaker.twitter.url |
-                replace("https://twitter.com/", "") }}</a
-              >
-            </p>
-
+              </p>
             {% endif %}
             <div class="text-step-0 stack-s">
               {{ speaker.description | safe }}

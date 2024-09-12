@@ -1,12 +1,12 @@
 <header role="banner" class="site-head">
   <div class="wrapper">
-   <nav aria-label="Main" class="nav | centerflex">
+   <nav class="nav | centerflex">
       {% if page.url == "/" %}
         <span class="nav__home-link">
       {% else %}
         <a href="/" aria-label="{{ site.name }} - Home" class="nav__home-link"> 
       {% endif %}
-        <div class="ribbon">
+        <div class="ribbon" aria-hidden="true">
           <div class="ribbon__color">
             {% include "partials/logo.svg" %}
           </div>
