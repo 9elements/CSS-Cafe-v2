@@ -1,6 +1,6 @@
 module.exports = [
   {
-    name: "Christian Schäfer",
+    name: "Christian Schaefer",
     twitter: "derSchepp",
     img: "christian-schaefer"
   },
